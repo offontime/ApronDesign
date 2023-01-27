@@ -1,0 +1,264 @@
+@import '../../assets/styles/global.less';
+.circle {
+  width: 100px; /* no */
+  height: 100px; /* no */
+  border-radius: 50%;
+  transition: all, 1500ms;
+}
+.circle-blue {
+  width: 364px; /* no */
+  height: 364px; /* no */
+  background: linear-gradient(315deg, rgba(213, 235, 255, 0.5) 20.29%, rgba(215, 239, 247, 0) 85.04%);
+  position: fixed;
+  z-index: 0;
+  top: 200px; /* no */
+  left: -100px; /* no */
+}
+.circle-green {
+  width: 244px; /* no */
+  height: 244px; /* no */
+  background: linear-gradient(320.47deg, rgba(210, 244, 220, 0.4) 20.46%, rgba(106, 235, 142, 0) 89.53%);;
+  position: fixed;
+  z-index: 1;
+  top: 280px; /* no */
+  right: -70px; /* no */
+}
+.home-page {
+  .section {
+    position: relative;
+    z-index: 8;
+    .section-title {
+      font-weight: 600;
+      font-size: 24px; /* no */
+      line-height: 34px; /* no */
+      text-align: center;
+      color: #000000;
+    }
+    .section-sub {
+      font-weight: 400;
+      font-size: 14px; /* no */
+      line-height: 20px; /* no */
+      text-align: center;
+      color: #999999;
+    }
+  }
+  .section-home {
+    .section-home-main {
+      .section-home-h1 {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px; /* no */
+        line-height: 34px; /* no */
+        color: #000000;
+      }
+      .section-home-tip {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px; /* no */
+        line-height: 20px; /* no */
+        color: #999999;
+      }
+    }
+  }
+  .section-logo {
+    background: #F9FBFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-resources {}
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .home-page {
+    padding-top: 45px;
+    .section {
+      padding: 45px 15px;
+      .section-title {
+        font-size: 24px;
+        line-height: 34px;
+      }
+      .section-sub {
+        font-size: 14px;
+        line-height: 34px;
+      }
+    }
+    .section-home {
+      height: 540px;
+      padding: 45px 0;
+      .section-home-main {
+        .section-home-h1 {
+          text-align: center;
+        }
+        .section-home-tip {
+          text-align: center;
+          margin-top: 19px;
+        }
+      }
+      .section-home-related {
+        .section-home-demo-pic {
+          margin-top: 63px;
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+        .section-home-demo-container {
+          display: none;
+        }
+      }
+    }
+    .section-logo {
+      height: 105px;
+      img {
+        height: 40px;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .home-page {
+    padding-top: 45px; /* no */
+    .section {
+      padding: 45px 15px; /* no */
+    }
+    .section-home {
+      // height: 495px; /* no */
+      padding: 45px 0; /* no */
+      .section-home-main {
+        .section-home-h1 {
+          text-align: center;
+        }
+        .section-home-tip {
+          text-align: center;
+          margin-top: 19px;
+        }
+      }
+      .section-home-related {
+        .section-home-demo-pic {
+          margin-top: 63px; /* no */
+          margin-left: auto;
+          margin-right: auto;
+          width: 402px; /* no */
+          img {
+            width: 100%;
+          }
+        }
+        .section-home-demo-container {
+          display: none;
+        }
+      }
+    }
+    .section-logo {
+      height: 105px; /* no */
+      img {
+        height: 40px; /* no */
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .home-page {
+    padding-top: 60px; /* no */
+    .section {
+      padding: 60px 0; /* no */
+    }
+    .section-home {
+      height: 460px; /* no */
+      .container-core {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        .section-home-main {
+          width: 540px; /* no */
+          .section-home-h1 {
+            font-size: 24px; /* no */
+            line-height: 34px; /* no */
+          }
+          .section-home-tip {
+            margin-top: 19px; /* no */
+            font-size: 14px; /* no */
+          }
+        }
+        .section-home-related {
+          width: 540px; /* no */
+          .section-home-demo-pic {
+            display: none;
+          }
+          .section-home-demo-container {
+            width: 540px; /* no */
+            height: 300px; /* no */
+            background-image: url('../../assets/images/home/blur-icons.png');
+            background-size: 100% 100%;
+            position: relative;
+            .section-home-demo-img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              transition: all, 200ms;
+            }
+            .section-home-demo-window {
+              width: 400px; /* no */
+              height: 260px; /* no */
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+              
+              .window-container {
+                width: 100%;
+                height: 100%;
+                background-image: url('../../assets/images/home/window.png');
+                background-size: 100% 100%;
+                position: relative;
+                --animate-delay: 0.9s;
+                backdrop-filter: blur(3.5px); /* no */
+                .window-hello {
+                  position: absolute;
+                  width: 320px; /* no */
+                  height: 70px; /* no */
+                  top: 68px; /* no */
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background-image: url('../../assets/images/home/dark-name.png');
+                  background-size: 100% 100%;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all, 300ms;
+                  }
+                  &:hover {
+                    img {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .section-logo {
+      height: 100px; /* no */
+      img {
+        height: 40px; /* no */
+      }
+    }
+  }
+}

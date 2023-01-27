@@ -1,0 +1,46 @@
+<div class="page home-page">
+  <Header theme="light"></Header>
+  <div class="section section-home">
+    <div class="container-core">
+      <div class="section-home-main">
+        <div class="section-home-h1">智能设计体系</div>
+        <div class="section-home-h1">连接轻盈体验</div>
+        <div class="section-home-tip"># 完全开源的企业级设计系统</div>
+      </div>
+      <div class="section-home-related">
+        <div class="section-home-demo-pic">
+          <img src="../../assets/images/design.png" />
+        </div>
+        <div class="section-home-demo-container animate__animated animate__fadeIn" :style="`background-position: ${demoStyle.backgroundPosition}`" >
+          <img
+            ref="demo"
+            class="section-home-demo-img"
+            src="../../assets/images/home/icons.png"
+            :style="{ transform: demoStyle.transform }" />
+          <div class="section-home-demo-window">
+            <div class="window-container animate__animated animate__backInDown">
+              <div class="window-hello">
+                <img src="../../assets/images/home/light-name.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-logo">
+    <img src="../../assets/images/logo.png" />
+  </div>
+  <div class="section section-resources">
+    <div class="section-title">完整的设计和开发资源</div>
+    <div class="section-sub">不复杂，马上上手</div>
+    <div class="resources-container">
+      <div class="resource-item resource-design"></div>
+      <div class="resource-item resource-develop"></div>
+    </div>
+  </div>
+  <div style="height: 1000px"></div>
+  <Footer></Footer>
+  <div class="circle circle-blue" :style="`top: ${blueCirclePosition}`"></div>
+  <div class="circle circle-green" :style="`top: ${greenCirclePosition}`"></div>
+</div>
