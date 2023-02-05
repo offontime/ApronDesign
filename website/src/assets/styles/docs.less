@@ -1,140 +1,122 @@
-.document-markdown {
-  width: 100%;
-  color: #393939;
+@import './design.doc.less';
+
+.doc-markdown {
   h1 {
-    font-size: 28px;
-    line-height: 40px;
-    height: 40px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    &:first-child {
-      margin-top: 0;
-    }
+    font-size: 36px; /* no */
+    line-height: 45px;  /* no */
+    margin: 20px 0 0; /* no */
   }
   h2 {
-    font-size: 22px;
-    line-height: 40px;
-    height: 40px;
-    margin: 30px 0 10px 0;
-    &:first-child {
-      margin-top: 0;
-    }
+    font-size: 24px; /* no */
+    line-height: 32px;  /* no */
+    margin: 28px 0 12px;
   }
   h3 {
-    font-size: 18px;
-    line-height: 38px;
-    margin: 15px 0 5px 0;
-    &:first-child {
-      margin-top: 0;
-    }
+    font-size: 20px; /* no */
+    line-height: 30px;  /* no */
+    margin: 24px 0 12px; /* no */
   }
   h4 {
-    font-size: 16px;
-    line-height: 28px;
-    margin: 15px 0 5px 0;
+    font-size: 16px; /* no */
+    line-height: 26px; /* no */
+    margin: 20px 0 12px; /* no */
+  }
+  h5 {
+    font-size: 14px; /* no */
+    line-height: 22px; /* no */
+    margin: 18px 0 12px; /* no */
+  }
+  h6 {
+    font-size: 12px; /* no */
+    line-height: 18px; /* no */
+    margin: 16px 0 12px; /* no */
+  }
+  p {
+    font-size: 14px; /* no */
+    line-height: 20px; /* no */
+    margin: 12px 0 0; /* no */
     &:first-child {
       margin-top: 0;
     }
   }
-  h5 {
-    margin-top: 18px;
-    margin-bottom: 18px;
-  }
-  h6 {
-    margin-top: 18px;
-    margin-bottom: 18px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border: none;
-    font-size: 14px;
-    th {
-      background: #ECECEC;
-      padding: 0 20px;
-      font-weight: bold;
-    }
-    tr {
-      height: 40px;
-      &:nth-child(2n) {
-        background: #F7F7F7;
-      }
-      td {
-        padding: 0 20px;
-      }
-    }
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 28px;
-    margin: 5px 0;
-  }
-
-  code {
-    background: #efeff3;
-    padding: 2px 5px;
-    border-radius: 4px;
-  }
-
-  ul, ol {
-    margin-left: -20px;
-    li {
-      margin: 5px 0;
-      font-size: 14px;
-      line-height: 28px;
-    }
+  blockquote {
+    font-weight: 400;
+    font-size: 14px; /* no */
+    line-height: 20px; /* no */
+    padding: 20px 20px 20px 18px; /* no */
+    margin: 16px 0; /* no */
+    color: #7E7E7E;
+    background: #F4F4F4;
+    border-left: 2px solid #D9D9D9; /* no */
   }
   pre {
-    background: #f8f8f9;
-    padding: 20px;
-    word-wrap: break-word;
-    word-break: break-all;
-    white-space: pre-wrap;
-    code {
-      background: transparent;
-      padding: 0;
-      line-height: 22px;
-      overflow-x: hidden;
-      word-wrap: break-word;
-      word-break: break-all;
-      white-space: pre-wrap;
+    font-weight: 400;
+    font-size: 14px; /* no */
+    line-height: 20px; /* no */
+    padding: 20px; /* no */
+    margin: 16px 0; /* no */
+    color: #7E7E7E;
+    background: #F4F4F4;
+  }
+  .header-anchor {
+    display: none;
+  }
+  ul, ol {
+    font-size: 14px; /* no */
+    line-height: 20px; /* no */
+    margin: 12px 0 0; /* no */
+    padding: 0 0 0 14px; /* no */
+    li {
+      margin-top: 5px; /* no */
+      &:first-child {
+        margin-top: 0;
+      }
+      p {
+        &:last-child {
+          margin-bottom: 10px; /* no */
+        }
+      }
     }
   }
+}
 
-  blockquote {
-    padding: 10px 20px;
-    background-color: #F3F3F3;
-    border-left: 5px solid #C4C4C4;
-    margin: 5px 0;
-    p {
-      margin: 5px 0;
+// Mobile
+@media screen and (max-width: 767px) {
+  .doc-markdown {
+    h1 {
+      font-size: 36px;
+      line-height: 45px;
+      margin: 20px 0 0;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 28px 0 12px;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 30px;
+      margin: 24px 0 12px;
+    }
+    h4 {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 20px 0 12px;
+    }
+    h5 {
       font-size: 14px;
       line-height: 22px;
+      margin: 18px 0 12px;
     }
-  }
-  a:link, a:visited {
-    color: #4C9EEA;
-    transition: all, 300ms;
-  }
-  a:hover {
-    color: #6FB1EF;
-  }
-  a:active {
-    color: #1B80DD;
-  }
-  // 锚点链接样式污染
-  .header-anchor {
-    opacity: .5;
-    display: none;
-    color: #cccccc;
-    // margin-left: -23px;
-    &:hover {
-      opacity: 1;
+    h6 {
+      font-size: 12px;
+      line-height: 18px;
+      margin: 16px 0 12px;
     }
-  }
-  img {
-    width: 100%;
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 12px 0 0;
+    }
   }
 }

@@ -1,0 +1,17 @@
+<div :class="['fun-plus-input', 'fun-plus-input-default', ...inputClass]">
+  <input
+    :type="currentType"
+    v-model="currentValue"
+    @focus="handleInputFocus"
+    @blur="handleInputBlur"
+    :placeholder="placeholder" />
+  <div class="ops">
+    <div class="button" @click="handleClearInput" v-if="clearable">
+      <Icon name="clear" />
+    </div>
+    <div class="button" @click="handleTogglePasswordType" v-if="type === 'password'">
+      <Icon v-if="currentType === 'password'" name="eye-open" />
+      <Icon v-else name="eye-close" />
+    </div>
+  </div>
+</div>

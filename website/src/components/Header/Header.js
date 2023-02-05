@@ -44,6 +44,12 @@ export default {
           path: to
         })
       }
+      if (type === 'link') {
+        window.location.href = to
+      }
+      if (type === 'blank') {
+        window.open(to)
+      }
     },
     onScroll () {
       // 滚动时候的情况

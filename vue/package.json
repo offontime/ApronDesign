@@ -1,0 +1,68 @@
+{
+  "name": "@apron.design/vue",
+  "version": "0.0.12",
+  "description": "A Vue2.x UI Component Library",
+  "scripts": {
+    "watch": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name @apron.design/vue --dest lib packages/index.js",
+    "publish:npm": "npm run lib && npm publish",
+    "publish:web": "npm run build && scp -r ./dist/* root@47.104.80.66:/home/www/uiweb@funplus.illiaccess.com/dist",
+    "publish:all": "npm run publish:npm && npm run publish:web"
+  },
+  "main": "lib/@apron.design/vue.common.js",
+  "author": "mitkimi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/offontime/ApronDesign.git"
+  },
+  "homepage": "https://vue.apron.design",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "github-markdown-css": "^4.0.0",
+    "highlight.js": "^10.7.0",
+    "path": "^0.12.7",
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.3",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.1.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-chain": "^1.3.0",
+    "markdown-it-container": "^2.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

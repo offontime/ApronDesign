@@ -1,0 +1,16 @@
+<div class="fun-plus-drawer" v-if="visible">
+  <div :class="coverClass"></div>
+  <div class="drawer-container">
+    <div :class="drawerClass">
+      <div class="ops">
+        <div class="op-button" @click="handleClose">
+          <Icon name="arrow-right" />
+        </div>
+      </div>
+      <div class="drawer-body">
+        <div class="drawer-title" v-if="title">{{title}}</div>
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</div>

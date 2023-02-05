@@ -1,0 +1,100 @@
+@import '../../assets/styles/global.less';
+@import '../../assets/styles/docs.less';
+.document-page {
+  .document-page-container {
+    .list-menu {
+
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .document-page {
+    padding-top: 45px;
+  }
+}
+
+// 非 mobile
+.document-page {
+  .document-page-container {
+    .list-menu {
+      .menu-container {
+        .menu-item {
+          height: 40px; /* no */
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          color: #393939;
+          font-size: 14px; /* no */
+          transition: all 300ms;
+          
+        }
+        .menu-item-active {
+          background: #f4f4f4;
+          width: calc(100% - 20px); /* no */
+          padding-left: 20px; /* no */
+          color: #1B80DD;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .document-page {
+    padding-top: 45px; /* no */
+    .document-page-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 60px; /* no */
+      .list-menu {
+        width: 165px; /* no */
+        .menu-container {
+          position: fixed;
+          width: 165px; /* no */
+        }
+      }
+      .document-main {
+        width: 525px; /* no */
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .document-page {
+    padding-top: 60px; /* no */
+    .document-page-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 80px; /* no */
+      min-height: calc(100vh - 140px - 232px); /* no */
+      .list-menu {
+        width: 220px; /* no */
+        .menu-container {
+          position: fixed;
+          width: 220px; /* no */
+          .menu-item {
+            &:hover {
+              width: calc(100% - 20px); /* no */
+              padding-left: 20px; /* no */
+              background: #e8f2fc;
+            }
+          }
+        }
+      }
+      .document-main {
+        width: 700px; /* no */
+      }
+    }
+  }
+}

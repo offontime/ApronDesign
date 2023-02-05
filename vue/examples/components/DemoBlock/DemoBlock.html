@@ -1,0 +1,14 @@
+<div class="demo-block">
+  <div class="demo">
+    <slot name="source"></slot>
+  </div>
+  <Collapse>
+    <div class="code" v-if="isExpanded">
+      <slot name="highlight"></slot>
+    </div>
+  </Collapse>
+  <div :class="`toggle ${isExpanded ? 'active' : ''}`" @click="() => { handleCodeToggle() }">
+    <span v-if="isExpanded">隐藏代码</span>
+    <span v-else>显示代码</span>
+  </div>
+</div>

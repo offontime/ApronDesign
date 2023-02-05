@@ -1,11 +1,12 @@
 # ApronDesign
 > 正在开发
-> current version: 0.0.1
+> 
+> 当前版本：0.0.1
 
-【English】(./README.md) | 简体中文
+[English](./README.md) | 简体中文
 
 ## 简介
-超过 30 种开箱即用的组建，支持主流开发环境
+超过 30 种开箱即用的组件，支持主流开发环境
 
 ## Packages
 | 名称 | Github 地址 | NPM 地址 |

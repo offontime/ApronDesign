@@ -1,0 +1,454 @@
+@font-face {
+  font-family: "funicon"; /* Project id 3131150 */
+  src: url('iconfont.woff2?t=1641829166686') format('woff2'),
+       url('iconfont.woff?t=1641829166686') format('woff'),
+       url('iconfont.ttf?t=1641829166686') format('truetype');
+}
+
+.funicon {
+  font-family: "funicon" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fun-times:before {
+  content: "\e64f";
+}
+
+.fun-twitter:before {
+  content: "\e659";
+}
+
+.fun-googleplay:before {
+  content: "\e643";
+}
+
+.fun-flame:before {
+  content: "\e644";
+}
+
+.fun-download:before {
+  content: "\e645";
+}
+
+.fun-grid:before {
+  content: "\e646";
+}
+
+.fun-edit:before {
+  content: "\e647";
+}
+
+.fun-americanExpress:before {
+  content: "\e648";
+}
+
+.fun-git:before {
+  content: "\e649";
+}
+
+.fun-focusLatex:before {
+  content: "\e64a";
+}
+
+.fun-funplus:before {
+  content: "\e64b";
+}
+
+.fun-disney:before {
+  content: "\e64c";
+}
+
+.fun-google:before {
+  content: "\e64d";
+}
+
+.fun-hangouts:before {
+  content: "\e64e";
+}
+
+.fun-guide:before {
+  content: "\e650";
+}
+
+.fun-info:before {
+  content: "\e651";
+}
+
+.fun-key:before {
+  content: "\e652";
+}
+
+.fun-global:before {
+  content: "\e653";
+}
+
+.fun-idea:before {
+  content: "\e654";
+}
+
+.fun-mail:before {
+  content: "\e655";
+}
+
+.fun-masterCard:before {
+  content: "\e656";
+}
+
+.fun-layers:before {
+  content: "\e657";
+}
+
+.fun-instagram:before {
+  content: "\e658";
+}
+
+.fun-keyboard:before {
+  content: "\e65a";
+}
+
+.fun-more:before {
+  content: "\e65b";
+}
+
+.fun-medal:before {
+  content: "\e65c";
+}
+
+.fun-merge:before {
+  content: "\e65d";
+}
+
+.fun-minus:before {
+  content: "\e65e";
+}
+
+.fun-mi:before {
+  content: "\e65f";
+}
+
+.fun-next:before {
+  content: "\e660";
+}
+
+.fun-pause:before {
+  content: "\e661";
+}
+
+.fun-paperclip:before {
+  content: "\e662";
+}
+
+.fun-map:before {
+  content: "\e663";
+}
+
+.fun-mouse:before {
+  content: "\e664";
+}
+
+.fun-paypal:before {
+  content: "\e665";
+}
+
+.fun-percent:before {
+  content: "\e666";
+}
+
+.fun-position:before {
+  content: "\e667";
+}
+
+.fun-plus:before {
+  content: "\e668";
+}
+
+.fun-person:before {
+  content: "\e669";
+}
+
+.fun-play:before {
+  content: "\e66a";
+}
+
+.fun-prev:before {
+  content: "\e66b";
+}
+
+.fun-message:before {
+  content: "\e66c";
+}
+
+.fun-pull-request:before {
+  content: "\e66d";
+}
+
+.fun-qq:before {
+  content: "\e66e";
+}
+
+.fun-ringing:before {
+  content: "\e66f";
+}
+
+.fun-scan:before {
+  content: "\e670";
+}
+
+.fun-setting:before {
+  content: "\e671";
+}
+
+.fun-stop:before {
+  content: "\e672";
+}
+
+.fun-star-full:before {
+  content: "\e673";
+}
+
+.fun-spinning:before {
+  content: "\e674";
+}
+
+.fun-skype:before {
+  content: "\e675";
+}
+
+.fun-star-empty:before {
+  content: "\e676";
+}
+
+.fun-success:before {
+  content: "\e677";
+}
+
+.fun-redbook:before {
+  content: "\e678";
+}
+
+.fun-share:before {
+  content: "\e679";
+}
+
+.fun-qr:before {
+  content: "\e67a";
+}
+
+.fun-pay-qr:before {
+  content: "\e67b";
+}
+
+.fun-telegram:before {
+  content: "\e67c";
+}
+
+.fun-timer:before {
+  content: "\e67d";
+}
+
+.fun-star-half:before {
+  content: "\e67e";
+}
+
+.fun-tag:before {
+  content: "\e67f";
+}
+
+.fun-taobao:before {
+  content: "\e680";
+}
+
+.fun-tiktok:before {
+  content: "\e681";
+}
+
+.fun-time:before {
+  content: "\e682";
+}
+
+.fun-upload:before {
+  content: "\e683";
+}
+
+.fun-usb:before {
+  content: "\e684";
+}
+
+.fun-volume-1:before {
+  content: "\e685";
+}
+
+.fun-volume-0:before {
+  content: "\e686";
+}
+
+.fun-visa:before {
+  content: "\e687";
+}
+
+.fun-warning:before {
+  content: "\e688";
+}
+
+.fun-volume-mute:before {
+  content: "\e689";
+}
+
+.fun-volume-2:before {
+  content: "\e68a";
+}
+
+.fun-wechat:before {
+  content: "\e68b";
+}
+
+.fun-weibo:before {
+  content: "\e68c";
+}
+
+.fun-unionPay:before {
+  content: "\e68d";
+}
+
+.fun-wechatPay:before {
+  content: "\e68e";
+}
+
+.fun-alipay:before {
+  content: "\e621";
+}
+
+.fun-arrow-down:before {
+  content: "\e622";
+}
+
+.fun-arrow-left:before {
+  content: "\e623";
+}
+
+.fun-arrow-up:before {
+  content: "\e624";
+}
+
+.fun-android:before {
+  content: "\e625";
+}
+
+.fun-arrow-right:before {
+  content: "\e626";
+}
+
+.fun-barcode:before {
+  content: "\e627";
+}
+
+.fun-clear:before {
+  content: "\e628";
+}
+
+.fun-buffer:before {
+  content: "\e629";
+}
+
+.fun-apple:before {
+  content: "\e62a";
+}
+
+.fun-bug:before {
+  content: "\e62b";
+}
+
+.fun-burger:before {
+  content: "\e62c";
+}
+
+.fun-award:before {
+  content: "\e62d";
+}
+
+.fun-apps:before {
+  content: "\e62e";
+}
+
+.fun-commit:before {
+  content: "\e62f";
+}
+
+.fun-create:before {
+  content: "\e630";
+}
+
+.fun-current:before {
+  content: "\e631";
+}
+
+.fun-delete:before {
+  content: "\e632";
+}
+
+.fun-division:before {
+  content: "\e633";
+}
+
+.fun-amazon:before {
+  content: "\e634";
+}
+
+.fun-branch:before {
+  content: "\e635";
+}
+
+.fun-date:before {
+  content: "\e636";
+}
+
+.fun-coin:before {
+  content: "\e637";
+}
+
+.fun-cart:before {
+  content: "\e638";
+}
+
+.fun-error:before {
+  content: "\e639";
+}
+
+.fun-appstore:before {
+  content: "\e63a";
+}
+
+.fun-discover:before {
+  content: "\e63b";
+}
+
+.fun-finish:before {
+  content: "\e63c";
+}
+
+.fun-facebook:before {
+  content: "\e63d";
+}
+
+.fun-eye-close:before {
+  content: "\e63e";
+}
+
+.fun-coupon:before {
+  content: "\e63f";
+}
+
+.fun-ebay:before {
+  content: "\e640";
+}
+
+.fun-fullscreen:before {
+  content: "\e641";
+}
+
+.fun-eye-open:before {
+  content: "\e642";
+}
+

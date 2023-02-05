@@ -3,9 +3,13 @@
   <div class="section section-home">
     <div class="container-core">
       <div class="section-home-main">
-        <div class="section-home-h1">智能设计体系</div>
-        <div class="section-home-h1">连接轻盈体验</div>
-        <div class="section-home-tip"># 完全开源的企业级设计系统</div>
+        <div class="section-home-h1">轻盈设计</div>
+        <div class="section-home-h1">精致律动体验</div>
+        <div class="section-home-tip"># 全面开源的通用设计系统</div>
+        <div class="actions">
+          <Button type="primary" style="width: 130px;" @click="$router.push('/guide/apron')">开始吧</Button>
+          <Button style="margin-left: 20px; width: 130px;" @click="$router.push('/design/principle')">设计原则</Button>
+        </div>
       </div>
       <div class="section-home-related">
         <div class="section-home-demo-pic">
@@ -22,6 +26,7 @@
               <div class="window-hello">
                 <img src="../../assets/images/home/light-name.png" />
               </div>
+              <Button class="start-button" type="primary" style="width: 130px;" @click="$router.push('/guide/apron')">开始吧</Button>
             </div>
           </div>
         </div>
@@ -35,11 +40,87 @@
     <div class="section-title">完整的设计和开发资源</div>
     <div class="section-sub">不复杂，马上上手</div>
     <div class="resources-container">
-      <div class="resource-item resource-design"></div>
-      <div class="resource-item resource-develop"></div>
+      <div class="resource-item resource-design">
+        <img class="resource-background" src="../../assets/images/figma.png" />
+        <div class="resource-info-container">
+          <div class="resource-item-title">设计资源</div>
+          <div class="resource-item-sub">使用 Apron Design 快速创建产品设计</div>
+        </div>
+        <a class="resource-item-button" href="#">
+          <IconApron name="arrow-right" />
+        </a>
+      </div>
+      <div class="resource-item resource-develop">
+        <div class="resource-info-container">
+          <div class="resource-item-title">开发资源</div>
+          <div class="resource-item-sub">组件就是组件，使 Web 开发像搭积木</div>
+        </div>
+        <a class="resource-item-button" href="#">
+          <IconApron name="arrow-right" />
+        </a>
+      </div>
     </div>
   </div>
-  <div style="height: 1000px"></div>
+  <div class="section section-frameworks">
+    <div class="section-title">前端框架支持</div>
+    <div class="section-sub">常见常用的，基本都有</div>
+    <div class="framework-container">
+      <div class="framework-item">
+        <img src="../../assets/images/frameworks/vue.png" />
+        <div class="item-name">Vue 2.x</div>
+      </div>
+      <div class="framework-item">
+        <img src="../../assets/images/frameworks/vue.png" />
+        <div class="item-name">Vue 3.x</div>
+      </div>
+      <div class="framework-item">
+        <img src="../../assets/images/frameworks/react.png" />
+        <div class="item-name">React</div>
+      </div>
+      <div class="framework-item">
+        <img src="../../assets/images/frameworks/taro.png" />
+        <div class="item-name">Taro</div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-developer">
+    <div class="section-title">Apron Design</div>
+    <div class="section-sub">从 1 到一万并不容易</div>
+    <div class="resources-developer">
+      <div class="developer-title">设计师</div>
+      <div class="developer-container">
+        <div class="developer-item">
+          <img src="https://icon.apron.design/img/kimi.dd331574.png" />
+          <div class="name">田昊天</div>
+        </div>
+        <div class="developer-item">
+          <img src="https://icon.apron.design/img/Xinzai.0b0ecb47.png" />
+          <div class="name">万 鑫</div>
+        </div>
+      </div>
+    </div>
+    <div class="resources-developer">
+      <div class="developer-title">开发者</div>
+      <div class="developer-container">
+        <div class="developer-item">
+          <img src="https://icon.apron.design/img/kimi.dd331574.png" />
+          <div class="name">田昊天</div>
+        </div>
+        <div class="developer-item">
+          <img src="https://icon.apron.design/img/Xinzai.0b0ecb47.png" />
+          <div class="name">万 鑫</div>
+        </div>
+        <div class="developer-item">
+          <img src="https://icon.apron.design/img/abcd.b789e905.png" />
+          <div class="name">孙永豪</div>
+        </div>
+        <div class="developer-item">
+          <img src="https://icon.apron.design/img/miniocean.pic.8ff08579.jpeg" />
+          <div class="name">戴海洋</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <Footer></Footer>
   <div class="circle circle-blue" :style="`top: ${blueCirclePosition}`"></div>
   <div class="circle circle-green" :style="`top: ${greenCirclePosition}`"></div>

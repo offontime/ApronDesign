@@ -3,44 +3,44 @@ const menu = [
     key: 'design',
     name: '设计',
     type: 'route',
-    to: '/design'
+    to: '/design/introduction'
   },
   {
     key: 'guide',
+    name: '使用指南',
+    type: 'route',
+    to: '/guide/apron'
+  },
+  {
+    key: 'document',
     name: '开发',
     type: 'submenu',
     children: [
       {
         key: 'vue',
         name: 'Vue2',
-        type: 'route',
-        to: '/develop/vue'
+        type: 'link',
+        to: 'https://vue.apron.design'
       },
       {
         key: 'vue-next',
         name: 'Vue3',
-        type: 'route',
-        to: '/develop/vue-next'
+        type: 'link',
+        to: 'https://vue-next.apron.design'
       },
       {
         key: 'react',
         name: 'React',
-        type: 'route',
-        to: '/develop/react'
+        type: 'link',
+        to: 'https://react.apron.design'
       },
       {
         key: 'react-taro',
         name: 'Taro',
-        type: 'route',
-        to: '/develop/react-taro'
+        type: 'link',
+        to: 'https://taro.apron.design'
       }
     ]
-  },
-  {
-    key: 'lab',
-    name: '实验室',
-    type: 'route',
-    to: '/lab'
   },
   {
     key: 'ecosystem',

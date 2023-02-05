@@ -1,0 +1,23 @@
+<div class="page document-page">
+  <Header theme="light"></Header>
+  <div class="container-core document-page-container">
+    <div class="list-menu">
+      <div class="menu-container">
+        <router-link
+        :class="[
+          'menu-item',
+          item.key === $route.params.routeId ? 'menu-item-active' : ''
+          ]" v-for="item,index in navigation" :key="`menu-item-${index}`"
+        :to="`/${$route.path.split('/')[1]}/${item.key}`">
+          {{item.name}}
+        </router-link>
+      </div>
+    </div>
+    <div class="document-main">
+      <div class="doc-markdown">
+        <div v-for="c,index in mdList" :key="index" :is="allMds[c]" v-if="c === $route.params.routeId"></div>
+      </div>
+    </div>
+  </div>
+  <Footer></Footer>
+</div>
