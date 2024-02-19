@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <main style="height: 100vh; padding: 100px 60px">
+  <main style="height: 100vh; padding: 100px 30px">
     <div>
       <h1>button</h1>
       <div>
@@ -66,12 +66,14 @@
     </div>
     <div>
       <h1>link</h1>
-      <p><ap-link href="#">normal</ap-link></p>
-      <p><ap-link href="#" disabled>disabled</ap-link></p>
-      <p><ap-link href="#" hoverUnderlined>hover underlined</ap-link></p>
-      <p><ap-link href="#" hoverUnderlined disabled>hover underlined disabled</ap-link></p>
-      <p><ap-link href="#" underlined>underlined</ap-link></p>
-      <p><ap-link href="#" underlined disabled>underlined disabled</ap-link></p>
+      <ap-space>
+        <ap-link href="#">normal</ap-link>
+        <ap-link href="#" disabled>disabled</ap-link>
+        <ap-link href="#" hoverUnderlined>hover underlined</ap-link>
+        <ap-link href="#" hoverUnderlined disabled>hover underlined disabled</ap-link>
+        <ap-link href="#" underlined>underlined</ap-link>
+        <ap-link href="#" underlined disabled>underlined disabled</ap-link>
+      </ap-space>
     </div>
   </main>
 </template>
