@@ -1,0 +1,49 @@
+.apron-link {
+  color: var(--color-main);
+  text-decoration: none;
+  &:hover {
+    color: var(--color-main-hover);
+    text-decoration: none;
+  }
+  &:active {
+    color: var(--color-main-active);
+    text-decoration: none;
+  }
+}
+.apron-link-disabled {
+  color: var(--color-disabled);
+  cursor: not-allowed;
+  &:hover {
+    color: var(--color-disabled);
+  }
+  &:active {
+    color: var(--color-disabled);
+  }
+}
+
+.apron-link-hover-underlined {
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}
+.apron-link-hover-underlined:disabled {
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.apron-link-underlined {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}

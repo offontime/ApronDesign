@@ -1,0 +1,17 @@
+<div :class="`page-header ${viewBackgroundedHeader ? 'hard-page-header' : ''}`">
+  <div :class="`page-header-container ${viewBackgroundedHeader ? 'page-header-backgrounded' : ''}`">
+    <div class="header-container">
+      <div class="flex-div header-left">
+        <router-link to="/">
+          <div class="logo">
+            <img src="@/assets/logo.svg" />
+          </div>
+        </router-link>
+      </div>
+      <div class="flex-div header-right">
+        <ap-link href="https://apron.design/design" :hoverable="false">设计</ap-link>
+        <ap-link href="https://apron.design/develop" :hoverable="false">开发</ap-link>
+      </div>
+    </div>
+  </div>
+</div>
