@@ -1,0 +1,96 @@
+.docs-layout {
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  .nav {
+    width: 300px;
+    height: calc(100vh - 100px);
+    border-right: 1px solid var(--color-border);
+    position: relative;
+    transition: all 300ms;
+    .fullscreen-toggle {
+      width: 30px;
+      height: 30px;
+      background: var(--color-background);
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 100px;
+      transform: translateX(50%);
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+    .aside-nav-container {
+      padding: 40px 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      .nav-group {
+        margin-top: 20px;
+        width: calc(100% - 20px);
+        &:first-child {
+          margin-top: 0;
+        }
+        .nav-group-title {
+          color: var(--color-primary);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 40px;
+        }
+        .nav-group-container {
+          & > * {
+            margin-top: 5px;
+          }
+          .nav-item {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            color: var(--color-primary);
+            transition: all 300ms;
+            display: block;
+            &:hover {
+              background: var(--color-background-hover);
+            }
+          }
+          .nav-item-active {
+            background: var(--color-background-hover);
+            color: var(--color-main-active);
+            font-weight: 500;
+          }
+          .nav-sub-group-title {
+            margin-bottom: 10px;
+            color: var(--color-icon);
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    width: calc(100% - 320px);
+    transition: all 300ms;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    .main-document-container {
+      margin: 40px auto;
+      width: 980px;
+    }
+  }
+  .nav-fullscreen {
+    width: 0;
+  }
+  .content-fullscreen {
+    width: calc(100% - 20px);
+  }
+}

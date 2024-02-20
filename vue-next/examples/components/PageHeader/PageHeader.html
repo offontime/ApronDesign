@@ -2,6 +2,48 @@
   <div :class="`page-header-container ${viewBackgroundedHeader ? 'page-header-backgrounded' : ''}`">
     <div class="header-container">
       <div class="flex-div header-left">
+        <div class="menu-container">
+          <div class="menu-button">
+            <img src="@/assets/svg/apps.svg" />
+          </div>
+          <!-- <a-popover position="bl">
+            <div class="menu-button">
+              <img src="@/assets/svg/apps.svg" />
+            </div>
+            <template #content>
+              <div class="header-menu-container">
+                <div class="menu-container">
+                  <div class="menu-group">
+                    <div class="menu-group-title">开始使用</div>
+                    <div class="menu-group-list">
+                      <router-link to="/" class="item">集成方案</router-link>
+                      <a href="https://offontime.feishu.cn/docx/IL2ndUDbBoAXsSxk6rmczAvKn7e" target="_blank" class="item">开发文档</a>
+                    </div>
+                  </div>
+                  <div class="menu-group">
+                    <div class="menu-group-title">关于</div>
+                    <div class="menu-group-list">
+                      <a href="https://offontime.feishu.cn/docx/XybRdr3SWoR4fjxsHOpcqlFtn0f?from=from_copylink" target="_blank" class="item">更新日志</a>
+                      <a href="https://offontime.feishu.cn/docx/ArlYdV3pAol2OkxmloccMrWRnsg" target="_blank" class="item">关于我们</a>
+                      <a href="https://offontime.feishu.cn/docx/ONRcdWRR6oanDwxFpC1cKzwmnxc" target="_blank" class="item">联系我们</a>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.mitkimi.com" target="_blank">
+                  <div class="menu-outer">
+                    <div class="info-area">
+                      <img src="@/assets/images/mitkimi.png" />
+                      <img class="view-logo" src="@/assets/images/mitkimi-light.png" />
+                    </div>
+                    <div class="to-icon">
+                      <IconApron name="arrow-right" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </template>
+          </a-popover> -->
+        </div>
         <router-link to="/">
           <div class="logo">
             <img src="@/assets/logo.svg" />
@@ -9,8 +51,8 @@
         </router-link>
       </div>
       <div class="flex-div header-right">
-        <ap-link href="https://apron.design/design" :hoverable="false">设计</ap-link>
-        <ap-link href="https://apron.design/develop" :hoverable="false">开发</ap-link>
+        <ap-link href="https://apron.design/design">设计</ap-link>
+        <ap-link href="/docs/start">开发</ap-link>
       </div>
     </div>
   </div>

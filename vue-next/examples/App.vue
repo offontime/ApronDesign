@@ -5,7 +5,7 @@ import PageFooter from './components/PageFooter/index.vue'
 </script>
 
 <template>
-  <PageHeader />
+  <PageHeader isBackgroundedHeader />
   <RouterView />
   <PageFooter />
 </template>
