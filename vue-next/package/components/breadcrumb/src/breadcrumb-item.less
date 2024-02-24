@@ -1,0 +1,26 @@
+.apron-breadcrumb-item {
+  margin: 0 0 0 5px;
+  .apron-breadcrumb-item-separator {
+    margin-right: 5px;
+  }
+  .apron-breadcrumb-item-text {
+    color: var(--color-heading);
+  }
+  &:first-child {
+    margin-left: 0;
+    .apron-breadcrumb-item-separator {
+      display: none;
+    }
+  }
+}
+
+.apron-breadcrumb-item__default {
+  .apron-breadcrumb-item-text {
+    font-weight: 400;
+  }
+  &:last-child {
+    .apron-breadcrumb-item-text {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.main-document-container {
+  h1 {
+    font-size: 28px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--color-heading);
+    font-weight: 500;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 40px;
+    height: 40px;
+    margin: 30px 0 10px 0;
+    color: var(--color-heading);
+    font-weight: 500;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 38px;
+    margin: 30px 0 10px 0;
+    color: var(--color-heading);
+    font-weight: 500;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 15px 0 5px 0;
+    color: var(--color-heading);
+    font-weight: 400;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h5 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: var(--color-heading);
+    font-weight: 400;
+  }
+  h6 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: var(--color-heading);
+    font-weight: 400;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-size: 14px;
+    
+    tr {
+      &:nth-child(2n) {
+        background: var(--color-background-hover);
+      }
+      &:nth-child(2n-1) {
+        border-bottom: 1px solid var(--color-background-hover);
+      }
+    }
+    th {
+      background: #ECECEC;
+      padding: 0 20px;
+      font-weight: bold;
+      color: var(--color-heading);
+      padding: 10px 20px;
+      min-height: 40px;
+    }
+    td {
+      padding: 10px 20px;
+      min-height: 40px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    margin: 5px 0;
+    color: var(--color-text);
+  }
+
+  code {
+    background: var(--color-background-hover);
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+
+  ul, ol {
+    margin: 15px 0 15px -25px;
+    li {
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+  pre {
+    background: var(--color-background-hover);
+    padding: 10px 0;
+    code {
+      overflow-x: hidden;
+      word-wrap: break-word;
+      word-break: break-all;
+      white-space: pre-wrap;
+      .line {
+        padding: 5px 30px;
+        min-height: 24px;
+        margin: -8px 0;
+      }
+    }
+  }
+
+  blockquote {
+    border-bottom: 1px solid var(--color-border);
+    margin: 0 0 20px;
+    padding-bottom: 30px;
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+  a:link, a:visited {
+    color: var(--color-main);
+    transition: all, 300ms;
+  }
+  a:hover {
+    color: var(--color-main-hover);
+  }
+  a:active {
+    color: var(--color-main-active);
+  }
+  // 锚点链接样式污染
+  .header-anchor {
+    opacity: .5;
+    display: none;
+    color: #cccccc;
+    // margin-left: -23px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+
+// highlight
+code {
+  span.line {
+    display: block;
+  }
+}
+.language-bash, .language-js, .language-ts, .language-javascript, .language-typescript {
+  position: relative;
+  .lang {
+    font-size: 12px;
+    color: var(--color-main);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0.2;
+    transition: all, 0.5s;
+  }
+  &:hover {
+    .lang { opacity: 1;}
+  }
+  .copy {
+    display: none;
+  }
+}
+
+// demo-block
+.vitepress-demo-preview__element-plus__container {
+  border: 1px solid var(--color-border);
+}
+.vitepress-demo-preview-description__split-line {
+  border-bottom: 1px solid var(--color-background-hover)!important;
+}
+
+.line {
+  position: relative;
+  &.remove {
+    background: #C1171733;
+    &::before {
+      display: block;
+      position: absolute;
+      content: '-';
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-error);
+    }
+  }
+  &.add {
+    background: #1BBA4833;
+    &::before {
+      display: block;
+      position: absolute;
+      content: '+';
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-success);
+    }
+  }
+}
+.has-focused-lines {
+  .line {
+    filter: blur(1.5px);
+    transition: all, 500ms;
+  }
+  .has-focus {
+    filter: blur(0);
+  }
+  &:hover {
+    .line {
+      filter: blur(0);
+    }
+  }
+}
+.highlighted {
+  background: var(--ap-c-gray-light-4);
+}
