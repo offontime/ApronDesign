@@ -13,7 +13,7 @@
     "format": "prettier --write package/ --write src/",
     "lib": "------ build --target lib --name @apron.design/vue-next --dest lib package/index.ts",
     "publish:npm": "npm run lib && npm publish",
-    "publish:web": "npm run docs:build && rsync -r ./dist/* root@47.243.181.134:/srv/apron.design/vue-next.web",
+    "publish:web": "npm run docs:build && rsync -r ./docs/.vitepress/dist/* root@47.243.181.134:/srv/apron.design/vue-next.web",
     "publish:all": "npm run publish:npm && npm run publish:web",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
