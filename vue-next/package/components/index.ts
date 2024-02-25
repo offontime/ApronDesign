@@ -1,11 +1,16 @@
-import { Button } from './button'
-import { Link } from './link'
-import { Space } from './space'
 import {
   Breadcrumb,
   BreadcrumbItem,
 } from './breadcrumb'
+import { Button } from './button'
 import { Divider } from './divider'
+import { Link } from './link'
+import { Space } from './space'
+import { Switch } from './switch'
+import {
+  Timeline,
+  TimelineItem
+} from './timeline'
 
 import type { Plugin } from 'vue'
 
@@ -15,5 +20,8 @@ export default [
   Button,
   Divider,
   Link,
-  Space
+  Space,
+  Switch,
+  Timeline,
+  TimelineItem
 ] as Plugin[]

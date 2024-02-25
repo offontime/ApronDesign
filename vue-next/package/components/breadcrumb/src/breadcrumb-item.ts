@@ -6,8 +6,7 @@ export const breadcrumbItemProps = {
    * @description whether the component has underline
    */
   separator: {
-    type: [String, Number],
-    default: '/',
+    type: [String, Number]
   },
   /**
    * @description 当前面包屑链接，留空表示不是链接
@@ -21,11 +20,7 @@ export const breadcrumbItemProps = {
     default: '_self',
   },
 } 
-export type BreadcrumbProps = ExtractPropTypes<typeof breadcrumbItemProps>
 
-export const breadcrumbItemEmits = {
-  click: (evt: MouseEvent) => evt instanceof MouseEvent,
-}
-export type BreadcrumbItemEmits = typeof breadcrumbItemEmits
+export type BreadcrumbProps = ExtractPropTypes<typeof breadcrumbItemProps>
 
 export type BreadcrumbItemInstance = InstanceType<typeof BreadcrumbItem>

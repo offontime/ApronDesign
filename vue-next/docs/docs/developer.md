@@ -28,12 +28,11 @@ editLink: true
 目前我们拥有以下固定的分支：
 
 - dev
-- feature
 - main
 
 我们使用 dev 分支进行维护类型的开发。
 
-每当有新组件加入，我们会新建分支，并且以 merge request 合并进 feature 分支进行管理，所以如果你有全新的组件加入，请以 feature 分支作为最新版本。
+每当有新组件加入，我们会新建分支，并且以 merge request 合并进 main 分支进行管理，所以如果你有全新的组件加入，请以 main 分支作为最新版本。
 
 我们会不定期根据实际情况进行版本的更新。请留意 [更新日志](/docs/changelog)
 
