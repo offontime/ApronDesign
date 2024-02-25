@@ -11,10 +11,10 @@ With more than 30 crafted components that you can use out of the box.
 ## Packages
 | Name | Github Link | NPM link |
 | :---- | :---- | :---- |
-| React Package | [React Component](https://github.com/offontime/ApronDesign/tree/master/) | - |
+| React Package | [React Component](https://github.com/offontime/ApronDesign/tree/main/) | - |
 | React-taro Package | - | - |
-| Vue2 Package | [Vue Component for Vue2](https://github.com/offontime/ApronDesign/tree/master/vue) | - |
-| Vue3 Package | [Vue Component for Vue3](https://github.com/offontime/ApronDesign/tree/master/vue-next) | - |
+| Vue2 Package | [Vue Component for Vue2](https://github.com/offontime/ApronDesign/tree/main/vue) | - |
+| Vue3 Package | [Vue Component for Vue3](https://github.com/offontime/ApronDesign/tree/main/vue-next) | - |
 
 ## Website
 Here is the website of ApronDesign
