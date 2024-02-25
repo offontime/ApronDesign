@@ -11,10 +11,10 @@
 ## Packages
 | 名称 | Github 地址 | NPM 地址 |
 | :---- | :---- | :---- |
-| React Package | [React Component](https://github.com/offontime/ApronDesign/tree/master/) | - |
+| React Package | [React Component](https://github.com/offontime/ApronDesign/tree/main/) | - |
 | React-taro Package | - | - |
-| Vue2 Package | [Vue Component for Vue2](https://github.com/offontime/ApronDesign/tree/master/vue) | - |
-| Vue3 Package | [Vue Component for Vue3](https://github.com/offontime/ApronDesign/tree/master/vue-next) | - |
+| Vue2 Package | [Vue Component for Vue2](https://github.com/offontime/ApronDesign/tree/mai n/vue) | - |
+| Vue3 Package | [Vue Component for Vue3](https://github.com/offontime/ApronDesign/tree/main/vue-next) | - |
 
 ## 网站
 访问 ApronDesign 网站

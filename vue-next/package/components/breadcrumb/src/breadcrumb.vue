@@ -1,21 +1,18 @@
 <template>
   <div class="apron-breadcrumb">
-    <slot />
+    <slot :parentSeparator="separator" peak="345" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { breadcrumbEmits, breadcrumbProps } from './breadcrumb'
+import { provide } from 'vue'
+import { breadcrumbProps } from './breadcrumb'
 
 defineOptions({
   name: 'ApBreadcrumb',
 })
 const props = defineProps(breadcrumbProps)
-const emit = defineEmits(breadcrumbEmits)
-
-function handleClick(event: MouseEvent) {
-  if (!props.disabled) emit('click', event)
-}
+provide('parentSeparator', props.separator)
 </script>
 
 <style src="./breadcrumb.less" lang="less"></style>

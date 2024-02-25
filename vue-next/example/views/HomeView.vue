@@ -1,20 +1,46 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+const switchValue = ref(false)
 </script>
 
 <template>
   <div class="main-container">
+    <div class="section">
+      <h1>Timeline</h1>
+      <ap-timeline>
+        <ap-timeline-item label="2023/11/27">第一个时间节点</ap-timeline-item>
+        <ap-timeline-item label="2023/11/28">第二个时间节点</ap-timeline-item>
+        <ap-timeline-item label="2023/11/29">第三个时间节点</ap-timeline-item>
+      </ap-timeline>
+    </div>
+    <div class="section">
+      <h1>Switch</h1>
+      <ap-space>
+        <ap-switch v-model="switchValue" isPrimary />
+        <ap-switch v-model="switchValue" size="small" disabled />
+      </ap-space>
+      <ap-space>
+        <span>switchValue value:</span>
+        <span>{{ switchValue }}</span>
+      </ap-space>
+    </div>
     <div clas="section">
       <h1>Divider</h1>
+      <p>0</p>
       <ap-divider />
+      <p>1</p>
       <ap-divider orientation="left">Text</ap-divider>
+      <p>2</p>
       <ap-divider>Text</ap-divider>
+      <p>3</p>
       <ap-divider orientation="right">Text</ap-divider>
+      <p>4</p>
       <ap-divider orientation="center" line-style="dashed">Text</ap-divider>
     </div>
     <div class="section">
       <h1>Breadcrumb</h1>
       <div>
-        <ap-breadcrumb>
+        <ap-breadcrumb separator=":">
           <ap-breadcrumb-item href="https://www.mitkimi.com">Vue3</ap-breadcrumb-item>
           <ap-breadcrumb-item>组件</ap-breadcrumb-item>
           <ap-breadcrumb-item>导航</ap-breadcrumb-item>
@@ -107,7 +133,7 @@
 </template>
 
 <style lang="less" scoped>
-.main-contianer {
+.main-container {
   min-height: 100vh;
   padding: 100px 30px;
   .section {
