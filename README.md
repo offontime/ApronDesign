@@ -1,29 +1,21 @@
 # ApronDesign
-> underdeveloping
->
-> current version: 0.0.1
+> 正在开发
+> 
+> 当前版本：0.0.1-develop
 
-English | [简体中文](./README.zh-cn.md)
-
-## Introduction
-With more than 30 crafted components that you can use out of the box.
+## 简介
+超过 30 种开箱即用的组件，支持主流开发环境
 
 ## Packages
-| Name | Github Link | NPM link |
+| 名称 | Github 地址 | NPM 地址 |
 | :---- | :---- | :---- |
 | React Package | [React Component](https://github.com/offontime/ApronDesign/tree/main/) | - |
 | React-taro Package | - | - |
-| Vue2 Package | [Vue Component for Vue2](https://github.com/offontime/ApronDesign/tree/main/vue) | - |
+| Vue2 Package | [Vue Component for Vue2](https://github.com/offontime/ApronDesign/tree/mai n/vue) | - |
 | Vue3 Package | [Vue Component for Vue3](https://github.com/offontime/ApronDesign/tree/main/vue-next) | - |
 
-## Website
-Here is the website of ApronDesign
+## 网站
+访问 ApronDesign 网站
 
-## Usage
-TBD
-
-## Change Log
-[CHANGE LOG](./CHANGELOG.md) | [更新日志](./CHANGELOG.zh-cn.md)
-
-## Contact Us
+## 联系我们
 TBD
