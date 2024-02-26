@@ -1,0 +1,174 @@
+.apron-circle-button {
+  transition: all, 300ms;
+  border-radius: 50%;
+  width: 105px;
+  height: 105px;
+  display: block;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  .slot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &.apron-circle-button-theme__halo {
+    box-shadow: 0 0 35px 3px var(--color-background-hover);
+    &:hover {
+      box-shadow: 0 0 15px 4px var(--color-background-hover);
+    }
+    &:active {
+      box-shadow: 0 0 25px 4px var(--color-background-active);
+    }
+  }
+  &:disabled {
+    color: var(--color-icon);
+    background: var(--color-background-hover);
+    border-color: transparent;
+    cursor: not-allowed;
+    &:hover {
+      color: var(--color-icon)!important;
+      background: var(--color-background-hover);
+      border-color: transparent;
+    }
+    &:active {
+      color: var(--color-icon)!important;
+      background: var(--color-background-hover);
+    }
+  }
+}
+
+.apron-circle-button__primary {
+  color: var(--color-background);
+  background: var(--color-primary);
+  &:hover {
+    background: var(--color-primary-hover);
+  }
+  &:active {
+    background: var(--color-primary-active);
+  }
+  &.apron-circle-button__danger {
+    background: var(--color-error);
+    &:hover {
+      opacity: .8;
+    }
+    &:active {
+      opacity: .9;
+    }
+    &.apron-circle-button-theme__halo {
+      box-shadow: 0 0 35px 3px var(--color-error);
+      &:hover {
+        box-shadow: 0 0 15px 4px var(--color-error);
+      }
+      &:active {
+        box-shadow: 0 0 25px 4px var(--color-error);
+      }
+    }
+  }
+  &.apron-circle-button-theme__halo {
+    box-shadow: 0 0 35px 3px var(--color-primary);
+    &:hover {
+      box-shadow: 0 0 15px 4px var(--color-primary-hover);
+    }
+    &:active {
+      box-shadow: 0 0 25px 4px var(--color-primary-active);
+    }
+    &.apron-circel-button__danger {
+      box-shadow: 0 0 35px 3px var(--color-error);
+      &:hover {
+        box-shadow: 0 0 15px 4px var(--color-error);
+      }
+      &:active {
+        box-shadow: 0 0 25px 4px var(--color-error);
+      }
+    }
+  }
+}
+
+.apron-circle-button__main {
+  background: var(--color-main);
+  border: 1px solid var(--color-main);
+  color: var(--color-background);
+  &:hover {
+    background: var(--color-main-hover);
+  }
+  &:active {
+    background: var(--color-main-active);
+  }
+  &.apron-circle-button__danger {
+    background: var(--color-error);
+    border-color: transparent;
+    color: var(--color-background);
+    &:hover {
+      opacity: .8;
+    }
+    &:active {
+      opacity: .9;
+    }
+    &.apron-circle-button-theme__halo {
+      box-shadow: 0 0 35px 3px var(--color-error);
+      &:hover {
+        box-shadow: 0 0 15px 4px var(--color-error);
+      }
+      &:active {
+        box-shadow: 0 0 25px 4px var(--color-error);
+      }
+    }
+  }
+  &.apron-circle-button-theme__halo {
+    box-shadow: 0 0 35px 3px var(--color-main);
+    &:hover {
+      box-shadow: 0 0 15px 4px var(--color-main-hover);
+      border-color: transparent;
+    }
+    &:active {
+      box-shadow: 0 0 25px 4px var(--color-main-active);
+    }
+  }
+}
+
+.apron-circle-button__default {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  background: var(--color-background);
+  &:hover {
+    color: var(--color-primary-hover);
+    background: var(--color-background-hover);
+    border-color: var(--color-primary-hover);
+    text-decoration: none;
+  }
+  &:active {
+    color: var(--color-primary-active);
+    background: var(--color-background-hover);
+    border-color: var(--color-primary-active);
+    text-decoration: none;
+  }
+  &.apron-circle-button__danger {
+    color: var(--color-error);
+    border-color: var(--color-error);
+    &.apron-circle-button-theme__halo {
+      box-shadow: 0 0 35px 3px var(--color-error);
+      &:hover {
+        box-shadow: 0 0 15px 4px var(--color-error);
+      }
+      &:active {
+        box-shadow: 0 0 25px 4px var(--color-error);
+      }
+    }
+  }
+  &.apron-circle-button-theme__halo {
+    box-shadow: 0 0 35px 3px var(--color-primary);
+    &:hover {
+      box-shadow: 0 0 15px 4px var(--color-primary-hover);
+      border-color: transparent;
+    }
+    &:active {
+      box-shadow: 0 0 25px 4px var(--color-primary-active);
+    }
+  }
+}
+

@@ -1,3 +1,4 @@
+import CircleButton from './circle-button'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,6 +19,7 @@ export default [
   Breadcrumb,
   BreadcrumbItem,
   Button,
+  CircleButton,
   Divider,
   Link,
   Space,

@@ -37,23 +37,33 @@ editLink: true
 }
 </style>
 <ap-timeline>
-<ap-timeline-item>
+  <ap-timeline-item>
+    <div class="flex-container">
+      <div class="timeline-dist">
+        <div class="version">pre-fix-bugs</div>
+        <div class="update-date">before version 1.0</div>
+      </div>
+      <div class="change-log">
+        <h3>🐛 问题</h3>
+        <ul>
+          <li>按钮组件：去除链接按钮类型，统一使用链接组件</li>
+          <li>开关组件：修复 disabled 状态</li>
+          <li>按钮/圆按钮/开关/链接组件：修复 loading 状态</li>
+        </ul>
+      </div>
+    </div>
+  </ap-timeline-item>
+  <ap-timeline-item>
     <div class="flex-container">
       <div class="timeline-dist">
         <div class="version">0.0.1-develop</div>
         <div class="update-date">2024-02-26</div>
       </div>
       <div class="change-log">
-        <h3>🐛 问题修复</h3>
-        <ul>
-          <li>按钮组件：去除链接按钮类型，统一使用链接组件</li>
-          <li>开关组件：修复 disabled 状态</li>
-          <li>按钮/开关/链接组件：修复 loading 状态</li>
-        </ul>
         <h3>🆕 新增功能</h3>
         <ul>
           <li>通用组件：圆按钮</li>
-          <li>通用组件：图标，使用独立的组件库</li>
+          <li>数据组件：时间线（只有基础功能）</li>
         </ul>
       </div>
     </div>
