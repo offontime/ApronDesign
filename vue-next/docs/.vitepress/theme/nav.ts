@@ -83,12 +83,6 @@ export const nav: Array<any> = [
         // file:'grid.md',
         title: '栅格 Grid'
       },
-      // {
-      //   href: '/components/layout',
-      //   key: 'layout',
-      //   // file:'layout.md',
-      //   title: '布局 Layout'
-      // },
       {
         href: '/components/space',
         key: 'space',
@@ -189,6 +183,13 @@ export const nav: Array<any> = [
       //   // file:'avatar.md',
       //   title: '表格 Table'
       // },
+
+      {
+        href: '/components/qrcode',
+        key: 'qrcode',
+        // file:'layout.md',
+        title: '二维码 Qrcode'
+      },
       {
         href: '/components/tabs',
         key: 'tabs',
