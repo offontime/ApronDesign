@@ -1,6 +1,6 @@
 {
   "name": "@apron.design/vue-next",
-  "version": "0.0.1-develop",
+  "version": "0.0.2-develop",
   "description": "A Vue3.x UI Component Library",
   "type": "module",
   "scripts": {

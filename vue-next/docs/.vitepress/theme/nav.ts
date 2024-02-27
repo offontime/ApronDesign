@@ -188,7 +188,7 @@ export const nav: Array<any> = [
         href: '/components/qrcode',
         key: 'qrcode',
         // file:'layout.md',
-        title: '二维码 Qrcode'
+        title: '二维码 QRcode'
       },
       {
         href: '/components/tabs',
