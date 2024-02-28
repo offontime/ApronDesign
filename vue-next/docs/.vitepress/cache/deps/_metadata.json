@@ -1,49 +1,49 @@
 {
-  "hash": "4cb38876",
+  "hash": "67420d65",
   "configHash": "5ae5148d",
-  "lockfileHash": "d316c8ab",
-  "browserHash": "46b40899",
+  "lockfileHash": "56247383",
+  "browserHash": "edc450e5",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3dadf4a1",
+      "fileHash": "ace9e3d5",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "19adb026",
+      "fileHash": "e55ab958",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "b71c56d8",
+      "fileHash": "14bac0a2",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
       "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "68cd3fc3",
+      "fileHash": "e923048e",
+      "needsInterop": false
+    },
+    "@icon-apron/vue-next": {
+      "src": "../../../../node_modules/@icon-apron/vue-next/lib/@icon-apron/vue-next.js",
+      "file": "@icon-apron_vue-next.js",
+      "fileHash": "86768373",
       "needsInterop": false
     },
     "dayjs": {
       "src": "../../../../node_modules/dayjs/dayjs.min.js",
       "file": "dayjs.js",
-      "fileHash": "934ee077",
+      "fileHash": "e33e2a66",
       "needsInterop": true
     },
     "@vue/shared": {
       "src": "../../../../node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "f644fa22",
-      "needsInterop": false
-    },
-    "@code-apron/vue-next": {
-      "src": "../../../../node_modules/@code-apron/vue-next/lib/@code-apron/vue-next.mjs",
-      "file": "@code-apron_vue-next.js",
-      "fileHash": "6be15225",
+      "fileHash": "4c78496a",
       "needsInterop": false
     }
   },

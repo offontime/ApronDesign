@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../node_modules/@icon-apron/vue-next/lib/@icon-apron/vue-next.js"],
+  "sourcesContent": ["import { openBlock as a, createElementBlock as s, normalizeClass as r } from \"vue\";\nconst p = (n, o) => {\n  const c = n.__vccOpts || n;\n  for (const [t, e] of o)\n    c[t] = e;\n  return c;\n}, l = /* @__PURE__ */ Object.assign({\n  name: \"ApIcon\"\n}, {\n  __name: \"icon\",\n  props: {\n    name: {\n      type: String,\n      default: \"icon-apron\"\n    }\n  },\n  setup(n) {\n    return (o, c) => (a(), s(\"span\", {\n      class: r([\"icon-apron\", `ap-${n.name}`])\n    }, null, 2));\n  }\n}), _ = /* @__PURE__ */ p(l, [[\"__scopeId\", \"data-v-7de77c60\"]]), m = [_], f = {\n  install(n) {\n    m.forEach((o) => {\n      n.component(o.name, o);\n    });\n  }\n};\nexport {\n  _ as Icon,\n  f as default\n};\n"],
+  "mappings": ";;;;;;;;;;AACA,IAAM,IAAI,CAAC,GAAG,MAAM;AAClB,QAAM,IAAI,EAAE,aAAa;AACzB,aAAW,CAAC,GAAG,CAAC,KAAK;AACnB,MAAE,CAAC,IAAI;AACT,SAAO;AACT;AALA,IAKG,IAAoB,OAAO,OAAO;AAAA,EACnC,MAAM;AACR,GAAG;AAAA,EACD,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACA,MAAM,GAAG;AACP,WAAO,CAAC,GAAG,OAAO,UAAE,GAAG,mBAAE,QAAQ;AAAA,MAC/B,OAAO,eAAE,CAAC,cAAc,MAAM,EAAE,IAAI,EAAE,CAAC;AAAA,IACzC,GAAG,MAAM,CAAC;AAAA,EACZ;AACF,CAAC;AApBD,IAoBI,IAAoB,EAAE,GAAG,CAAC,CAAC,aAAa,iBAAiB,CAAC,CAAC;AApB/D,IAoBkE,IAAI,CAAC,CAAC;AApBxE,IAoB2E,IAAI;AAAA,EAC7E,QAAQ,GAAG;AACT,MAAE,QAAQ,CAAC,MAAM;AACf,QAAE,UAAU,EAAE,MAAM,CAAC;AAAA,IACvB,CAAC;AAAA,EACH;AACF;",
+  "names": []
+}

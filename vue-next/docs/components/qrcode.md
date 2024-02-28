@@ -30,6 +30,7 @@ pnpm install @code-apron/vue-next --save-dev
 你需要在你的代码中单独按需引用此包（如果你同时需要使用 `CodeApron` 的多种码，则可以全部引用（在 1.0.5 之后的版本中），并使用 `<ap-qr-code />` 标签。但我们不建议这样使用）。
 ```typescript
 // 全部引用（在 1.0.5 版之后，不建议这样使用）
+// main.ts
 import CodeApron from '@code-apron/vue-next'
 app.use(CodeApron)
 ```

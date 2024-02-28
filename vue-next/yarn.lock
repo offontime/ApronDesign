@@ -639,6 +639,15 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
+"@icon-apron/vue-next@^2.0.0-develop":
+  version "2.0.0-develop"
+  resolved "https://registry.yarnpkg.com/@icon-apron/vue-next/-/vue-next-2.0.0-develop.tgz#9f4fc27f2aa1b0d3411479d0f69d9ef179816910"
+  integrity sha512-0rs55EEY2q4LVgLxsHFI5ZXa+4yNIotHnbtrN2zPKUF9hQqaBKNd76yitFdS7XzjfYfHX6uhM8LigRu0FMpPxw==
+  dependencies:
+    less "^4.2.0"
+    less-loader "^12.2.0"
+    vue "^3.4.15"
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
