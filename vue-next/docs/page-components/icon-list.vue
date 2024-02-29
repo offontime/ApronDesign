@@ -118,7 +118,7 @@ export default {
             { name: '钥匙', key: 'key' },
             { name: '锁', key: 'lock' },
             { name: '锁（开）', key: 'lock-open' },
-            { name: '二维码', key: 'qr-code' },
+            { name: '二维码', key: 'qr' },
             { name: '支付二维码', key: 'pay-qr' },
             { name: '条形码', key: 'barcode' },
             { name: '扫描', key: 'scan' },
