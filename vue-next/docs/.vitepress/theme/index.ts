@@ -5,6 +5,7 @@ import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 import '@vitepress-demo-preview/component/dist/style.css'
 import ApronDesign from '../../../package/index'
 import IconApron from '@icon-apron/vue-next'
+import CodeApron from '@code-apron/vue-next'
 import './assets/main.css'
 import './style.less'
 import './markdown.less'
@@ -15,6 +16,7 @@ export default {
     // ...
     app.use(ApronDesign)
     app.use(IconApron)
+    app.use(CodeApron)
     app.component('demo-preview', ElementPlusContainer)
   }
 } satisfies Theme

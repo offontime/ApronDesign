@@ -1,49 +1,55 @@
 {
-  "hash": "67420d65",
+  "hash": "9c016626",
   "configHash": "5ae5148d",
-  "lockfileHash": "56247383",
-  "browserHash": "edc450e5",
+  "lockfileHash": "0e835c38",
+  "browserHash": "6ee5a327",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "ace9e3d5",
+      "fileHash": "0df8c3b2",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "e55ab958",
+      "fileHash": "0bdfa219",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "14bac0a2",
+      "fileHash": "cf0c4f30",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
       "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "e923048e",
+      "fileHash": "2596a83a",
       "needsInterop": false
     },
     "@icon-apron/vue-next": {
       "src": "../../../../node_modules/@icon-apron/vue-next/lib/@icon-apron/vue-next.js",
       "file": "@icon-apron_vue-next.js",
-      "fileHash": "86768373",
+      "fileHash": "160651d3",
       "needsInterop": false
     },
     "dayjs": {
       "src": "../../../../node_modules/dayjs/dayjs.min.js",
       "file": "dayjs.js",
-      "fileHash": "e33e2a66",
+      "fileHash": "9fd5da36",
       "needsInterop": true
     },
     "@vue/shared": {
       "src": "../../../../node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "4c78496a",
+      "fileHash": "d9c44c08",
+      "needsInterop": false
+    },
+    "@code-apron/vue-next": {
+      "src": "../../../../node_modules/@code-apron/vue-next/lib/@code-apron/vue-next.mjs",
+      "file": "@code-apron_vue-next.js",
+      "fileHash": "e3b2ae7a",
       "needsInterop": false
     }
   },

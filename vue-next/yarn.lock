@@ -406,10 +406,10 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@code-apron/vue-next@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@code-apron/vue-next/-/vue-next-1.0.4.tgz#a5d4718d9653a0b659fba2bdeac2ff7e6c9874a1"
-  integrity sha512-vlp3aA4OvBDDmKuVySxLhtkOl6gdtoK49DJBqNdBaiNQs22Gqc3BmjGx7EN81KunJcEGcUVMdCYNFvRqTGomBg==
+"@code-apron/vue-next@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@code-apron/vue-next/-/vue-next-1.1.0.tgz#d442057ce6139c7caa43377bb2fd55a9c97ac1b4"
+  integrity sha512-+MrqxAtOyJSzppQwAy1HhIzoBUqiaJ5PIiIv8fzEa2BoNhyAqU+du32kOU59prL18cHjSWA9z2gGnxW1/LqObw==
   dependencies:
     less "^4.2.0"
     less-loader "^12.2.0"

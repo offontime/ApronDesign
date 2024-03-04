@@ -160,6 +160,12 @@ export const nav: Array<any> = [
         title: '数值 Statistic'
       },
       {
+        href: '/components/pdf417',
+        key: 'pdf417',
+        // file:'layout.md',
+        title: '二维码 Pdf417'
+      },
+      {
         href: '/components/popover',
         key: 'popover',
         // file:'popover.md',

@@ -1,15 +1,11 @@
-<script setup>
-  import { QrCode } from '@code-apron/vue-next'
-</script>
-
 <template>
   <ap-space class="demo">
     <span>默认边距</span>
-    <qr-code text="Apron Design" ></qr-code>
+    <ap-qrcode text="Apron Design" ></ap-qrcode>
   </ap-space>
   <ap-space class="demo">
     <span>边 距：8</span>
-    <qr-code text="Apron Design" :margin="8"></qr-code>
+    <ap-qrcode text="Apron Design" :margin="8"></ap-qrcode>
   </ap-space>
 </template>
 

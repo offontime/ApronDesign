@@ -1,10 +1,6 @@
-<script setup>
-  import { QrCode } from '@code-apron/vue-next'
-</script>
-
 <template>
   <div class="demo">
-    <qr-code text="Apron Design"></qr-code>
+    <ap-qrcode text="Apron Design"></ap-qrcode>
   </div>
 </template>
 

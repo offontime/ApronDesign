@@ -1,14 +1,10 @@
-<script setup>
-  import { QrCode } from '@code-apron/vue-next'
-</script>
-
 <template>
   <ap-space>
     <div class="demo">
-      <qr-code text="Apron Design"></qr-code>
+      <ap-qrcode text="Apron Design"></ap-qrcode>
     </div>
     <div class="demo demo-reverse-color">
-      <qr-code text="Apron Design" color="#FFFFFF" background-color="#393939"></qr-code>
+      <ap-qrcode text="Apron Design" color="#FFFFFF" background-color="#393939"></ap-qrcode>
     </div>
   </ap-space>
 </template>

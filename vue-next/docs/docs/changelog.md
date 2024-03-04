@@ -56,6 +56,25 @@ editLink: true
   <ap-timeline-item>
     <div class="flex-container">
       <div class="timeline-dist">
+        <div class="version">0.0.4-develop</div>
+        <div class="update-date">2024-03-05</div>
+      </div>
+      <div class="change-log">
+        <h3>🙋‍♂️ 组件用法变更</h3>
+        <ul>
+          <li>数据展示组件：二维码 QRcode，更新扩展包 @code-apron/vue-next version 1.1.0</li>
+        </ul>
+        <h3>🆕 新增功能</h3>
+        <ul>
+          <li>数据展示组件：二维码 Pdf417，采用额外安装扩展包 @code-apron/vue-next version 1.1.0</li>
+          <li>二维码 Pdf417 更新进文档</li>
+        </ul>
+      </div>
+    </div>
+  </ap-timeline-item>
+  <ap-timeline-item>
+    <div class="flex-container">
+      <div class="timeline-dist">
         <div class="version">0.0.3-develop</div>
         <div class="update-date">2024-02-29</div>
       </div>
