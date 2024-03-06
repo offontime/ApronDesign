@@ -1,14 +1,8 @@
 <template>
   <ap-space class="demo">
-    <ap-icon name="apron-design" />
-    <ap-icon name="star-full" />
-    <ap-icon name="global" />
-    <ap-icon name="calculate" />
+    <ap-icon :size="24" />
+    <ap-icon name="face" :size="24" />
+    <ap-icon name="star-full" :size="24" color="gold" />
+    <ap-icon name="global" :size="24" color="var(--color-success)" />
   </ap-space>
 </template>
-
-<style lang="less" scoped>
-.demo {
-  font-size: 24px;
-}
-</style>

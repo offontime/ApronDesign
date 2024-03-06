@@ -5,7 +5,7 @@
     <div class="icon-list-container">
       <div class="icon-item" v-for="item of group.children" :key="item.key">
         <div class="icon-container">
-          <ap-icon :name="item.key" />
+          <ap-icon :name="item.key" :size="30" color="var(--color-primary)" />
         </div>
         <div class="icon-item-name">{{ item.name }}</div>
         <div class="icon-key">{{ item.key }}</div>
@@ -28,8 +28,22 @@ export default {
             { name: '星（空心）', key: 'star-empty' },
             { name: '睁眼', key: 'eye-open' },
             { name: '闭眼', key: 'eye-close' },
+            { name: '看不见', key: 'eye-invisible' },
+            { name: '脸', key: 'face' },
+            { name: '微笑脸', key: 'face-smile' },
+            { name: '难过脸', key: 'face-sad' },
+            { name: '脸', key: 'face-filled' },
+            { name: '微笑脸', key: 'face-smile-filled' },
+            { name: '难过脸', key: 'face-sad-filled' },
+            { name: '心（满）', key: 'heart-full' },
+            { name: '心（半）', key: 'heart-half' },
+            { name: '心（空心）', key: 'heart-empty' },
+            { name: '身份证', key: 'id-card' },
+            { name: '通行证', key: 'pass-id' },
+            { name: '护照', key: 'passport' },
             { name: '清空', key: 'clear' },
             { name: '更多', key: 'more' },
+            { name: '图片', key: 'image' },
             { name: '完成', key: 'finish' },
             { name: '当前', key: 'current' },
             { name: '国际', key: 'global' },
@@ -42,6 +56,11 @@ export default {
             { name: '加载中', key: 'spinning' },
             { name: '加载中', key: 'ringing' },
             { name: '加载中', key: 'loading' },
+            { name: '导入', key: 'import' },
+            { name: '导出', key: 'export' },
+            { name: '搜索', key: 'search' },
+            { name: '放大', key: 'zoom-in' },
+            { name: '缩小', key: 'zoom-out' },
           ]
         },
         {
@@ -60,14 +79,26 @@ export default {
           title: '方向',
           desc: '各种方向的指示图标',
           children: [
+            { name: '上', key: 'up' },
+            { name: '右', key: 'right' },
+            { name: '下', key: 'down' },
+            { name: '左', key: 'left' },
+            { name: '上', key: 'double-up' },
+            { name: '右', key: 'double-right' },
+            { name: '下', key: 'double-down' },
+            { name: '左', key: 'double-left' },
             { name: '上', key: 'arrow-up' },
             { name: '右', key: 'arrow-right' },
             { name: '下', key: 'arrow-down' },
             { name: '左', key: 'arrow-left' },
-            { name: '上', key: 'narrow-up' },
-            { name: '右', key: 'narrow-right' },
-            { name: '下', key: 'narrow-down' },
-            { name: '左', key: 'narrow-left' },
+            { name: '上', key: 'caret-up' },
+            { name: '右', key: 'caret-right' },
+            { name: '下', key: 'caret-down' },
+            { name: '左', key: 'caret-left' },
+            { name: '上', key: 'circle-up' },
+            { name: '右', key: 'circle-right' },
+            { name: '下', key: 'circle-down' },
+            { name: '左', key: 'circle-left' },
           ]
         },
         {
@@ -78,6 +109,17 @@ export default {
             { name: '成功', key: 'success' },
             { name: '警告', key: 'warning' },
             { name: '错误', key: 'error' },
+            { name: '问题', key: 'question' },
+            { name: '消息', key: 'info-circle' },
+            { name: '成功', key: 'success-circle' },
+            { name: '警告', key: 'warning-circle' },
+            { name: '错误', key: 'error-circle' },
+            { name: '问题', key: 'question-circle' },
+            { name: '消息', key: 'info-filled' },
+            { name: '成功', key: 'success-filled' },
+            { name: '警告', key: 'warning-filled' },
+            { name: '错误', key: 'error-filled' },
+            { name: '问题', key: 'question-filled' },
           ]
         },
         {
@@ -134,6 +176,10 @@ export default {
             { name: '地铁', key: 'subway' },
             { name: '飞机', key: 'aircraft' },
             { name: '无人机', key: 'drone' },
+            { name: '街', key: 'street' },
+            { name: '路', key: 'road' },
+            { name: '公交车', key: 'bus' },
+            { name: '云轨列车', key: 'skyrail' },
           ]
         },
         {
@@ -163,10 +209,10 @@ export default {
             { name: '羽毛球', key: 'badminton' },
             { name: '网球', key: 'tennis' },
             { name: '台球', key: 'billiards' },
-            { name: '游泳', key: 'swimming' },
             { name: '轮滑', key: 'roller-skating' },
             { name: '滑板', key: 'skating-board' },
             { name: '暴走鞋', key: 'heelys' },
+            { name: '健身', key: 'body-building' },
           ]
         },
         {
@@ -178,8 +224,8 @@ export default {
             { name: '提交', key: 'commit' },
             { name: '合并', key: 'merge' },
             { name: 'PR', key: 'pull-request' },
-            { name: '层/图层', key: 'layer' },
-            { name: '苹果应用商店', key: 'app-store' },
+            { name: '层/图层', key: 'layers' },
+            { name: '苹果应用商店', key: 'appstore' },
             { name: '谷歌应用商店', key: 'googleplay' },
             { name: '缺陷', key: 'bug' },
             { name: '缓冲', key: 'buffer' },
@@ -193,7 +239,7 @@ export default {
           desc: '硬件研发场景使用或相关的技术图标。',
           children: [
             { name: '无线', key: 'wifi' },
-            { name: '无线（未链接）', key: 'wifi-disconnect' },
+            { name: '无线（未链接）', key: 'wifi-disconnected' },
             { name: '广播', key: 'boardcast' },
             { name: '服务器', key: 'server' },
             { name: '终端', key: 'terminal' },
@@ -218,7 +264,7 @@ export default {
             { name: '微信', key: 'wechat' },
             { name: 'QQ', key: 'qq' },
             { name: 'Instagram', key: 'instagram' },
-            { name: '抖音', key: 'tik-tok' },
+            { name: '抖音', key: 'tiktok' },
             { name: '小红书', key: 'redbook' },
             { name: 'Hangouts', key: 'hangouts' },
             { name: '小米', key: 'mi' },
@@ -250,6 +296,11 @@ export default {
             { name: 'Vue', key: 'vue' },
             { name: 'React', key: 'react' },
             { name: '达芬奇｜面具', key: 'davinci-mask' },
+            { name: 'Musescore', key: 'musescore' },
+            { name: 'Epic', key: 'epic' },
+            { name: 'X', key: 'twitter-x' },
+            { name: '黑米说', key: 'mitkimi' },
+            { name: '黑米说音乐厅', key: 'music-mitkimi' },
           ]
         },
         {
@@ -278,7 +329,7 @@ export default {
           title: '支付',
           desc: '与全球支付相关的各种图标',
           children: [
-            { name: '微信支付', key: 'wechatpay' },
+            { name: '微信支付', key: 'wechat-pay' },
             { name: '支付宝', key: 'alipay' },
             { name: 'PayPal', key: 'paypal' },
             { name: '中国银联', key: 'union-pay' },
@@ -324,13 +375,12 @@ export default {
         .icon-container {
           width: 40px;
           height: 40px;
-          font-size: 30px;
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          color: var(--color-icon);
           transition: all, 500ms;
+          opacity: .4;
         }
         .icon-item-name {
           margin-top: 20px;
@@ -338,8 +388,8 @@ export default {
         &:hover {
           background: var(--color-background-hover);
           .icon-container {
-            font-size: 36px;
             color: var(--color-primary);
+            opacity: 1;
           }
         }
       }

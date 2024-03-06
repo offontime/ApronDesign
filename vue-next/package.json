@@ -29,12 +29,12 @@
   "license": "MIT",
   "dependencies": {
     "@code-apron/vue-next": "^1.1.0",
+    "@icon-apron/vue-next": "^2.1.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@icon-apron/vue-next": "^2.0.0-develop",
     "@rushstack/eslint-patch": "^1.3.3",
     "@shikijs/markdown-it": "^1.1.6",
     "@tsconfig/node20": "^20.1.2",

@@ -9,7 +9,6 @@ import CodeApron from '@code-apron/vue-next'
 import './assets/main.css'
 import './style.less'
 import './markdown.less'
-import '@icon-apron/vue-next/lib/style.css'
 export default {
   Layout,
   enhanceApp({ app, router, siteData }) {
