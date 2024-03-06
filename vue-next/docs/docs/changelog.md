@@ -56,6 +56,21 @@ editLink: true
   <ap-timeline-item>
     <div class="flex-container">
       <div class="timeline-dist">
+        <div class="version">0.0.5-develop</div>
+        <div class="update-date">2024-03-07</div>
+      </div>
+      <div class="change-log">
+        <h3>🙋‍♂️ 组件用法变更</h3>
+        <ul>
+          <li>图标组件：更新扩展包 @icon-apron/vue-next version 2.1.2</li>
+          <li>图标组件：更新使用方法，不再依赖 iconfont 字体，使用 svg 图标</li>
+        </ul>
+      </div>
+    </div>
+  </ap-timeline-item>
+  <ap-timeline-item>
+    <div class="flex-container">
+      <div class="timeline-dist">
         <div class="version">0.0.4-develop</div>
         <div class="update-date">2024-03-05</div>
       </div>
