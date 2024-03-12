@@ -16,7 +16,7 @@ editLink: true
 # 图标 Icon
 > 在页面上展示图标。
 
-`IconApron` 是 Apron Design 的分支组件包（当前版本为：2.1.2），拥有独立设计并整理的图标库。
+`IconApron` 是 Apron Design 的分支组件包（当前版本为：2.3.1），拥有独立设计并整理的图标库。
 
 使用图标组件，你需要额外安装 `@icon-apron/vue-next` 组件包。
 

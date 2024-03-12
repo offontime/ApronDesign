@@ -56,6 +56,21 @@ editLink: true
   <ap-timeline-item>
     <div class="flex-container">
       <div class="timeline-dist">
+        <div class="version">0.0.6-develop</div>
+        <div class="update-date">2024-03-07</div>
+      </div>
+      <div class="change-log">
+        <h3>🙋‍♂️ 更新</h3>
+        <ul>
+          <li>图标组件：更新扩展包 @icon-apron/vue-next version 2.2.1</li>
+          <li>图标组件：更新了 75 个图标，新增了“文件”、“音乐”大类</li>
+        </ul>
+      </div>
+    </div>
+  </ap-timeline-item>
+  <ap-timeline-item>
+    <div class="flex-container">
+      <div class="timeline-dist">
         <div class="version">0.0.5-develop</div>
         <div class="update-date">2024-03-07</div>
       </div>

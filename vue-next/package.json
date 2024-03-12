@@ -1,6 +1,6 @@
 {
   "name": "@apron.design/vue-next",
-  "version": "0.0.5-develop",
+  "version": "0.0.6-develop",
   "description": "A Vue3.x UI Component Library",
   "type": "module",
   "scripts": {
@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "@code-apron/vue-next": "^1.1.0",
-    "@icon-apron/vue-next": "^2.1.2",
+    "@icon-apron/vue-next": "^2.3.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"

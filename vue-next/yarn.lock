@@ -639,10 +639,10 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
-"@icon-apron/vue-next@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@icon-apron/vue-next/-/vue-next-2.1.2.tgz#32a5b0d088bffd58441d7675b4132f7ac6437de5"
-  integrity sha512-/n6p5qv77DNVnZ2WoHCEGjE2svyTLkmOuNzCaqMSqVPcuhBD4o3km4zSRuBfUzhg5fWqQbiEl6ZiObnmkmvGPw==
+"@icon-apron/vue-next@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@icon-apron/vue-next/-/vue-next-2.3.1.tgz#c44138e5c7d57f2369de8686dc76f0a07ce4b20a"
+  integrity sha512-lVYMcNAxJPBnsjVmGBwwUjtq3Al0OacY0HB5qmm1mo1v75sCRIdWVIZ3l4T9XWSiFNf7wtpp8xMjl0vmG9ZWHw==
   dependencies:
     less "^4.2.0"
     less-loader "^12.2.0"
