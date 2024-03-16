@@ -14,6 +14,5 @@ export default defineConfigWithTheme<ThemeConfig>({
     lineNumbers: false,
     theme: 'light-plus', // https://shiki.style/themes#special-themes
     languages: ['html', 'css', 'js', 'ts', 'less', 'vue', 'bash', 'go']
-  },
-  cleanUrls: true
+  }
 })
