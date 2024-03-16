@@ -48,7 +48,7 @@ watch(
             <div class="nav-group-container">
               <div v-for="item in groupItem.children" :key="item.key">
                 <a v-if="item.href" :href="item.href" style="text-decoration: none;">
-                  <div :class="['nav-item', `${item.href}.html` === path ? 'nav-item-active' : '']">{{ item.title }}</div>
+                  <div :class="['nav-item', (`${item.href}.html` === path || item.href === path) ? 'nav-item-active' : '']">{{ item.title }}</div>
                 </a>
                 <div v-else class="nav-sub-group-title">{{ item.title }}</div>
               </div>

@@ -1,0 +1,82 @@
+{
+  "hash": "5ef03b83",
+  "configHash": "cc2546c2",
+  "lockfileHash": "5a0a3d9a",
+  "browserHash": "1ba87db0",
+  "optimized": {
+    "vue": {
+      "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "910f2be1",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "88467f1b",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "23ab2f37",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "0a868845",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "6894e807",
+      "needsInterop": false
+    },
+    "dayjs": {
+      "src": "../../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "df949be4",
+      "needsInterop": true
+    },
+    "pinia": {
+      "src": "../../../node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "95d5c5d3",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "d207881c",
+      "needsInterop": false
+    },
+    "@theme/index": {
+      "src": "../../../node_modules/vitepress/dist/client/theme-default/index.js",
+      "file": "@theme_index.js",
+      "fileHash": "5fb70a08",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-AGTD7LUC": {
+      "file": "chunk-AGTD7LUC.js"
+    },
+    "chunk-VFKD4RIN": {
+      "file": "chunk-VFKD4RIN.js"
+    },
+    "chunk-GZOPNIPP": {
+      "file": "chunk-GZOPNIPP.js"
+    },
+    "chunk-MKVTCIB4": {
+      "file": "chunk-MKVTCIB4.js"
+    },
+    "chunk-2O72KIMW": {
+      "file": "chunk-2O72KIMW.js"
+    },
+    "chunk-Y2F7D3TJ": {
+      "file": "chunk-Y2F7D3TJ.js"
+    }
+  }
+}
