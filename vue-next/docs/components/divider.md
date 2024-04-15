@@ -35,7 +35,7 @@ demo-preview=../demos/divider/orientation.vue
 | 参数 | 说明 | 类型 | 可选值 | 默认值 | 备注 |
 | :----- | :----- | :----- | :----- | :----- | :----- |
 | line-style | 线型 | String | solid/dashed/dotted/double | solid | 使用 css 的 `border-style` 属性支持的值 |
-| orientation | 分割线文字显示位置 | String | left/center/right | center | 仅在有插槽的时候有效 
+| orientation | 分割线文字显示位置 | String | left/center/right | center | 仅在有插槽的时候有效 |
 
 ### `<divider>` Slots
 

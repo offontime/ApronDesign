@@ -12,6 +12,7 @@ import {
   Timeline,
   TimelineItem
 } from './timeline'
+import { Empty } from './empty'
 
 import type { Plugin } from 'vue'
 
@@ -21,6 +22,7 @@ export default [
   Button,
   CircleButton,
   Divider,
+  Empty,
   Link,
   Space,
   Switch,

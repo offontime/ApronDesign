@@ -6,6 +6,12 @@ const switchValue = ref(false)
 <template>
   <div class="main-container">
     <div class="section">
+      <h1>Empty</h1>
+      <div style="height: 200px">
+        <ap-empty icon="archive" description="12321"></ap-empty>
+      </div>
+    </div>
+    <div class="section">
       <h1>Circle Button</h1>
       <ap-space class="with-divider-space">
         <ap-circle-button isPrimary>主要按钮</ap-circle-button>
