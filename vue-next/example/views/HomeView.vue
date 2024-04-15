@@ -6,6 +6,14 @@ const switchValue = ref(false)
 <template>
   <div class="main-container">
     <div class="section">
+      <h1>Spin</h1>
+      <ap-spin :loading="true" name="spinner">
+        <div style="height: 200px">
+          <ap-empty></ap-empty>
+        </div>
+      </ap-spin>
+    </div>
+    <div class="section">
       <h1>Empty</h1>
       <div style="height: 200px">
         <ap-empty icon="archive" description="12321"></ap-empty>

@@ -1,0 +1,134 @@
+.apron-spin-loading {
+  position: relative;
+  height: 100%;
+  .cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    .loading-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .loading-icon {
+        width: 20px;
+        height: 20px;
+      }
+      .loading-content {
+        margin-left: 10px;
+        color: var(--color-icon);
+      }
+    }
+  }
+}
+
+.apron-spin-left-top {
+  .cover {
+    .loading-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  }
+}
+
+.apron-spin-left-center {
+  .cover {
+    .loading-container {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.apron-spin-left-bottom {
+  .cover {
+    .loading-container {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+}
+
+.apron-spin-right-top {
+  .cover {
+    .loading-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.apron-spin-right-center {
+  .cover {
+    .loading-container {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.apron-spin-right-bottom {
+  .cover {
+    .loading-container {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.apron-spin-center-top {
+  .cover {
+    .loading-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.apron-spin-center-center {
+  .cover {
+    .loading-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .loading-icon {
+        width: 50px;
+        height: 50px;
+      }
+      .loading-content {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.apron-spin-center-bottom {
+  .cover {
+    .loading-container {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

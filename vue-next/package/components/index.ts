@@ -13,6 +13,7 @@ import {
   TimelineItem
 } from './timeline'
 import { Empty } from './empty'
+import { Spin } from './spin'
 
 import type { Plugin } from 'vue'
 
@@ -25,6 +26,7 @@ export default [
   Empty,
   Link,
   Space,
+  Spin,
   Switch,
   Timeline,
   TimelineItem
