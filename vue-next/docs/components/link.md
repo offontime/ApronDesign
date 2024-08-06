@@ -28,6 +28,13 @@ demo-preview=../demos/link/underlined.vue
 ### 加载中（未开放）
 只要给组件加上 `loading` 属性即可展示加载中状态。
 
+### 主要链接
+用作文字的链接
+
+:::preview
+demo-preview=../demos/link/primary.vue
+:::
+
 
 ### 禁用
 添加 `disabled` 属性即可让按钮处于不可用状态，同时按钮样式也会改变。

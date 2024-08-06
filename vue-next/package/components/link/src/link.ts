@@ -13,6 +13,10 @@ export const linkProps = {
     type: Boolean,
     default: false,
   },
+  type: {
+    type: String,
+    default: 'default'
+  },
   /**
    * @description whether the component is disabled
    */

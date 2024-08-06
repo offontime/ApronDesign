@@ -2,6 +2,7 @@
   <a
     :class="[
       'apron-link',
+      `apron-link-${type}`,
       hoverUnderlined ? 'apron-link-hover-underlined' : '',
       underlined ? 'apron-link-underlined' : '',
       disabled ? 'apron-link-disabled' : ''
