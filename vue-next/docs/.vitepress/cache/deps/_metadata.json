@@ -1,55 +1,55 @@
 {
-  "hash": "a9756e78",
-  "configHash": "5ae5148d",
+  "hash": "13e97856",
+  "configHash": "1b6921fa",
   "lockfileHash": "c3a48522",
-  "browserHash": "ebd6bf63",
+  "browserHash": "6b91914a",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d7b28ce6",
+      "fileHash": "34e1bd31",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "6ce035a6",
+      "fileHash": "8995ff05",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "b9880d7a",
+      "fileHash": "a8ea58e2",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
       "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "947d4f91",
+      "fileHash": "cef80460",
       "needsInterop": false
     },
     "@icon-apron/vue-next": {
       "src": "../../../../node_modules/@icon-apron/vue-next/lib/@icon-apron/vue-next.js",
       "file": "@icon-apron_vue-next.js",
-      "fileHash": "d2a9a39c",
+      "fileHash": "a9594b7d",
       "needsInterop": false
     },
     "@code-apron/vue-next": {
       "src": "../../../../node_modules/@code-apron/vue-next/lib/@code-apron/vue-next.mjs",
       "file": "@code-apron_vue-next.js",
-      "fileHash": "3087096b",
+      "fileHash": "988ad500",
       "needsInterop": false
     },
     "dayjs": {
       "src": "../../../../node_modules/dayjs/dayjs.min.js",
       "file": "dayjs.js",
-      "fileHash": "c6fabb4f",
+      "fileHash": "63b55829",
       "needsInterop": true
     },
     "@vue/shared": {
       "src": "../../../../node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "44bf790d",
+      "fileHash": "4e4b6ba7",
       "needsInterop": false
     }
   },

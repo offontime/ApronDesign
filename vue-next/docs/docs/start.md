@@ -22,19 +22,19 @@ IE 浏览器逐步被各种现代浏览器所取代，并且 `Vue3` 也不再支
 ## 安装
 ```bash
 # npm
-npm install --save-dev @apron-design/vue-next
+npm install --save-dev @apron.design/vue-next
 
 # yarn
-yarn add @apron-design/vue-next -D
+yarn add @apron.design/vue-next -D
 
 # pnpm
-pnpm add @apron-design/vue-next -D
+pnpm add @apron.design/vue-next -D
 ```
 
 ## 完整引用
 ```javascript
 import { createApp } from 'vue'
-import ApronDesign from '@apron-design/vue-next'
+import ApronDesign from '@apron.design/vue-next'
 import App from './App.vue'
 
 const app = createApp(App)

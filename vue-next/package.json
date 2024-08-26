@@ -1,27 +1,25 @@
 {
   "name": "@apron.design/vue-next",
-  "version": "0.1.0-develop",
+  "version": "0.1.4-develop",
   "description": "A Vue3.x UI Component Library",
-  "type": "module",
   "private": false,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build:only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write package/ --write src/",
-    "lib": "vite build --target lib --name @apron.design/vue-next --dest lib package/index.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "publish:npm": "npm run lib && npm publish",
-    "publish:web": "scp -r ./docs/.vitepress/dist/* root@47.243.181.134:/srv/apron.design/vue-next.web",
-    "publish:all": "npm run publish:npm && npm run publish:web"
+    "publish:web": "scp -r ./docs/.vitepress/dist/* root@47.243.181.134:/srv/apron.design/vue-next.web"
   },
-  "main": "lib/@apron.design/vue-next.es.js",
-  "module": "lib/@apron.design/vue-next.umd.js",
+  "main": "lib/apron.design.es.js",
+  "files": [
+    "lib"
+  ],
   "author": "mitkimi",
   "repository": {
     "type": "git",
@@ -65,5 +63,6 @@
     "vitepress": "^1.0.0-rc.44",
     "vitepress-theme-demoblock": "^3.0.3",
     "vue-tsc": "^1.8.27"
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }
