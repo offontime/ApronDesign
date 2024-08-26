@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
 } from './breadcrumb'
 import { Button } from './button'
+import { Checkbox } from './checkbox'
 import { Divider } from './divider'
 import { Link } from './link'
 import { Space } from './space'
@@ -21,6 +22,7 @@ export default [
   Breadcrumb,
   BreadcrumbItem,
   Button,
+  Checkbox,
   CircleButton,
   Divider,
   Empty,

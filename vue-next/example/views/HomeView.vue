@@ -1,10 +1,22 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 const switchValue = ref(false)
+const checkboxValue = ref(false)
 </script>
 
 <template>
   <div class="main-container">
+    <div class="section">
+      <h1>Checkbox</h1>
+      <div>
+        <ap-space>
+          <ap-checkbox v-model="checkboxValue">我已阅读并同意所有规章制度。</ap-checkbox>
+          <ap-checkbox v-model="checkboxValue" disabled>我已阅读并同意所有规章制度。</ap-checkbox>
+          <ap-checkbox v-model="checkboxValue" indeterminate>我已阅读并同意所有规章制度。</ap-checkbox>
+          <ap-checkbox v-model="checkboxValue" indeterminate disabled>我已阅读并同意所有规章制度。</ap-checkbox>
+        </ap-space>
+      </div>
+    </div>
     <div class="section">
       <h1>Spin</h1>
       <ap-spin :loading="true" name="spinner">
