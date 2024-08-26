@@ -56,6 +56,21 @@ editLink: true
   <ap-timeline-item>
     <div class="flex-container">
       <div class="timeline-dist">
+        <div class="version">0.1.0-develop</div>
+        <div class="update-date">2024-08-26</div>
+      </div>
+      <div class="change-log">
+        <h3>🙋‍♂️ 更新</h3>
+        <ul>
+          <li>更新了组件：Checkbox</li>
+          <li>发布第一个版本到 npm 上进行测试</li>
+        </ul>
+      </div>
+    </div>
+  </ap-timeline-item>
+  <ap-timeline-item>
+    <div class="flex-container">
+      <div class="timeline-dist">
         <div class="version">0.0.6-develop</div>
         <div class="update-date">2024-03-07</div>
       </div>
