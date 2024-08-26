@@ -3,6 +3,7 @@
   "version": "0.1.0-develop",
   "description": "A Vue3.x UI Component Library",
   "type": "module",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -11,15 +12,16 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write package/ --write src/",
-    "lib": "------ build --target lib --name @apron.design/vue-next --dest lib package/index.ts",
+    "lib": "vite build --target lib --name @apron.design/vue-next --dest lib package/index.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "publish:npm": "npm run lib && npm publish",
-    "publish:web": "rsync -r ./docs/.vitepress/dist/* root@47.243.181.134:/srv/apron.design/vue-next.web",
+    "publish:web": "scp -r ./docs/.vitepress/dist/* root@47.243.181.134:/srv/apron.design/vue-next.web",
     "publish:all": "npm run publish:npm && npm run publish:web"
   },
-  "main": "lib/@apron.design/vue-next/index.common.js",
+  "main": "lib/@apron.design/vue-next.es.js",
+  "module": "lib/@apron.design/vue-next.umd.js",
   "author": "mitkimi",
   "repository": {
     "type": "git",
