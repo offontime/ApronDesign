@@ -1,0 +1,65 @@
+.apron-input {
+  background: var(--color-background-hover);
+  border: 1px solid transparent;
+  height: 40px;
+  width: 300px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all, 300ms;
+  padding: 0 15px;
+  input {
+    height: 100%;
+    line-height: 100%;
+    font-size: 14px;
+    color: var(--color-primary);
+    border: 0;
+    background: transparent;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .apron-input-prepend, .apron-input-append {
+    color: var(--color-text);
+    font-size: 14px;
+  }
+  .apron-input-prepend {
+    margin-right: 15px;
+  }
+  .apron-input-append {
+    margin-left: 15px;
+  }
+}
+.apron-input-filled {
+  background: var(--color-background);
+  border: 1px solid var(--color-primary);
+}
+
+.apron-link {
+  color: var(--color-main);
+  text-decoration: none;
+  transition: all, 300ms;
+  &:hover {
+    color: var(--color-main-hover);
+    text-decoration: none;
+  }
+  &:active {
+    color: var(--color-main-active);
+    text-decoration: none;
+  }
+}
+.apron-link-disabled {
+  color: var(--color-disabled);
+  cursor: not-allowed;
+  &:hover {
+    color: var(--color-disabled);
+  }
+  &:active {
+    color: var(--color-disabled);
+  }
+}

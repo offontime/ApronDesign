@@ -6,6 +6,7 @@ import {
 import { Button } from './button'
 import { Checkbox } from './checkbox'
 import { Divider } from './divider'
+import { Input } from './input'
 import { Link } from './link'
 import { Space } from './space'
 import { Switch } from './switch'
@@ -26,6 +27,7 @@ export default [
   CircleButton,
   Divider,
   Empty,
+  Input,
   Link,
   Space,
   Spin,

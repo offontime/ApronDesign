@@ -2,10 +2,23 @@
 import { ref } from 'vue'
 const switchValue = ref(false)
 const checkboxValue = ref(false)
+const inputValue = ref('1234')
 </script>
 
 <template>
   <div class="main-container">
+    <div class="section">
+      <h1>Input {{ inputValue }}</h1>
+      <div>
+        <ap-input v-model="inputValue" placeholder="输入点什么放在这里？" />
+      </div>
+      <div style="margin-top: 10px;">
+        <ap-input v-model="inputValue" prepend="+86" placeholder="输入您的手机号" />
+      </div>
+      <div style="margin-top: 10px;">
+        <ap-input v-model="inputValue" append="元" placeholder="输入金额" />
+      </div>
+    </div>
     <div class="section">
       <h1>Checkbox</h1>
       <div>
