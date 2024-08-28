@@ -6,6 +6,10 @@ export const inputProps = {
     type: String,
     default: ''
   },
+  type: {
+    type: String,
+    default: 'text'
+  },
   placeholder: {
     type: String,
     default: ''
@@ -18,17 +22,29 @@ export const inputProps = {
     type: String,
     default: ''
   },
-  /**
-   * @description whether the component is disabled
-   */
+  search: {
+    type: Object || null,
+    default: null
+  },
+  allowClear: { type: Boolean, default: false },
   disabled: { type: Boolean, default: false },
+  onUpdate: {
+    type: Function,
+    default: null
+  }
 } 
 export type InputProps = ExtractPropTypes<typeof inputProps>
 
-export const inputEmits = {
-  input: (evt: KeyboardEvent) => evt instanceof KeyboardEvent,
-  click: (evt: MouseEvent) => evt instanceof MouseEvent,
-}
+export const inputEmits = [
+  'blur',
+  'change',
+  'clear',
+  'enter',
+  'focus',
+  'input',
+  'search',
+  'update:modelValue'
+]
 export type InputEmits = typeof inputEmits
 
 export type InputInstance = InstanceType<typeof Input>

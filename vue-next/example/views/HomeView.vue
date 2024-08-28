@@ -13,10 +13,19 @@ const inputValue = ref('1234')
         <ap-input v-model="inputValue" placeholder="输入点什么放在这里？" />
       </div>
       <div style="margin-top: 10px;">
-        <ap-input v-model="inputValue" prepend="+86" placeholder="输入您的手机号" />
+        <ap-input v-model="inputValue" prepend="+86" allow-clear placeholder="输入您的手机号" />
       </div>
       <div style="margin-top: 10px;">
         <ap-input v-model="inputValue" append="元" placeholder="输入金额" />
+      </div>
+      <div style="margin-top: 10px;">
+        <ap-input v-model="inputValue" type="password" allow-clear placeholder="输入密码" />
+      </div>
+      <div style="margin-top: 10px;">
+        <ap-input v-model="inputValue" disabled />
+      </div>
+      <div style="margin-top: 10px;">
+        <ap-input v-model="inputValue" :search="{ useIcon: true }" />
       </div>
     </div>
     <div class="section">
