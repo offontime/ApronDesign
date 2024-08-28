@@ -21,7 +21,7 @@
       />
       <div class="append-button-container">
         <div v-if="allowClear && inputValue" class="append-button allow-clear-control" @click="handleInputClear">
-          <ap-icon name="error-circle" :size="20" color="var(--color-text)" />
+          <ap-icon name="clear" :size="20" color="var(--color-text)" />
         </div>
         <div v-if="type === 'password'" class="append-button password-controls" @click="handlePasswordViewToggle">
           <ap-icon v-if="passwordView" name="eye-close" :size="20" color="var(--color-text)" />

@@ -1,13 +1,12 @@
 {
   "name": "@apron.design/vue-next",
-  "version": "0.1.4-develop",
+  "version": "0.1.7-develop",
   "description": "A Vue3.x UI Component Library",
   "private": false,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "build:only": "vite build",
+    "build": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write package/ --write src/",
