@@ -175,7 +175,41 @@ export default {
             { name: '条形码', key: 'barcode' },
             { name: '扫描', key: 'scan' },
             { name: '门票', key: 'ticket' },
-            { name: '复制', key: 'copy' }
+            { name: '发送', key: 'send' },
+            { name: '回复', key: 'reply' },
+            { name: '赞', key: 'like' },
+            { name: '踩', key: 'dislike' },
+            { name: '时钟', key: 'clock' },
+            { name: '历史记录', key: 'history' },
+            { name: '订阅', key: 'subscribe' },
+            { name: '已订阅', key: 'subscribed' },
+            { name: '翻译', key: 'translate' },
+            { name: '首页', key: 'home' },
+            { name: '分享', key: 'link-share' },
+            { name: '文字转语音', key: 'text-to-speech' },
+          ]
+        },
+        {
+          title: '编辑器',
+          desc: '',
+          children: [
+            { name: '复制', key: 'copy' },
+            { name: '粘贴', key: 'paste' },
+            { name: '剪切', key: 'cut' },
+            { name: '左对齐', key: 'text-align-left' },
+            { name: '居中对齐', key: 'text-align-center' },
+            { name: '右对齐', key: 'text-align-right' },
+            { name: '两端对齐', key: 'text-align-justifed' },
+            { name: '左对齐', key: 'align-horizontal-left' },
+            { name: '居中对齐', key: 'align-horizontal-center' },
+            { name: '右对齐', key: 'align-horizontal-right' },
+            { name: '顶端对齐', key: 'align-vertical-top' },
+            { name: '居中对齐', key: 'align-vertical-center' },
+            { name: '底部对齐', key: 'align-vertical-bottom' },
+            { name: '置于顶层', key: 'to-top-layer' },
+            { name: '上移一层', key: 'to-prev-ayer' },
+            { name: '置于底层', key: 'to-bottom-layer' },
+            { name: '下移一层', key: 'to-next-layer' }
           ]
         },
         {
@@ -223,6 +257,7 @@ export default {
             { name: '台球', key: 'billiards' },
             { name: '轮滑', key: 'roller-skating' },
             { name: '滑板', key: 'skating-board' },
+            { name: '漂移板', key: 'freeline-skates' },
             { name: '暴走鞋', key: 'heelys' },
             { name: '健身', key: 'body-building' },
             { name: '奥运', key: 'olympic' },
@@ -248,6 +283,7 @@ export default {
             { name: '同步', key: 'sync' },
             { name: 'Command', key: 'command' },
             { name: 'Opt', key: 'option' },
+            { name: 'CPU', key: 'cpu' },
           ]
         },
         {
@@ -255,6 +291,7 @@ export default {
           desc: '各种文件类型、文件夹的图标',
           children: [
             { name: '文件夹', key: 'folder' },
+            { name: '一些文件', key: 'files' },
             { name: '文件', key: 'file' },
             { name: 'Word 文档', key: 'file-doc' },
             { name: 'PPT 演示文稿', key: 'file-ppt' },
@@ -330,6 +367,7 @@ export default {
             { name: 'FunPlus', key: 'funplus' },
             { name: 'Airbnb', key: 'airbnb' },
             { name: '比特币', key: 'bitcoin' },
+            { name: 'OpenAI', key: 'openai' },
             { name: 'CodeOpen', key: 'codeopen' },
             { name: 'Behance', key: 'behance' },
             { name: 'Pinterest', key: 'pinterest' },

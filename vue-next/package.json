@@ -16,6 +16,7 @@
     "publish:web": "scp -r ./docs/.vitepress/dist/* root@47.243.181.134:/srv/apron.design/vue-next.web"
   },
   "main": "lib/apron.design.es.js",
+  "type": "module",
   "files": [
     "lib"
   ],
@@ -28,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "@code-apron/vue-next": "^1.1.0",
-    "@icon-apron/vue-next": "^2.3.1",
+    "@icon-apron/vue-next": "^2.3.3",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
