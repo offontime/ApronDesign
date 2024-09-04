@@ -1,11 +1,11 @@
 import {
+  setupDevtoolsPlugin
+} from "./chunk-GZOPNIPP.js";
+import {
   del,
   isVue2,
   set
-} from "./chunk-VFKD4RIN.js";
-import {
-  setupDevtoolsPlugin
-} from "./chunk-GZOPNIPP.js";
+} from "./chunk-Z5MM7V3J.js";
 import {
   computed,
   effectScope,
@@ -25,9 +25,9 @@ import {
   toRefs,
   unref,
   watch
-} from "./chunk-MKVTCIB4.js";
-import "./chunk-2O72KIMW.js";
-import "./chunk-Y2F7D3TJ.js";
+} from "./chunk-YHAYW26R.js";
+import "./chunk-QCPABISY.js";
+import "./chunk-BUSYA2B4.js";
 
 // node_modules/pinia/dist/pinia.mjs
 var activePinia;
@@ -47,7 +47,6 @@ var MutationType;
   MutationType2["patchFunction"] = "patch function";
 })(MutationType || (MutationType = {}));
 var IS_CLIENT = typeof window !== "undefined";
-var USE_DEVTOOLS = IS_CLIENT;
 var _global = (() => typeof window === "object" && window.window === window ? window : typeof self === "object" && self.self === self ? self : typeof global === "object" && global.global === global ? global : typeof globalThis === "object" ? globalThis : { HTMLElement: null })();
 function bom(blob, { autoBom = false } = {}) {
   if (autoBom && /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)) {
@@ -528,6 +527,7 @@ function registerPiniaDevtools(app, pinia) {
         payload.rootNodes = (payload.filter ? stores.filter((store) => "$id" in store ? store.$id.toLowerCase().includes(payload.filter.toLowerCase()) : PINIA_ROOT_LABEL.toLowerCase().includes(payload.filter.toLowerCase())) : stores).map(formatStoreForInspectorTree);
       }
     });
+    globalThis.$pinia = pinia;
     api.on.getInspectorState((payload) => {
       if (payload.app === app && payload.inspectorId === INSPECTOR_ID) {
         const inspectedStore = payload.nodeId === PINIA_ROOT_ID ? pinia : pinia._s.get(payload.nodeId);
@@ -535,6 +535,8 @@ function registerPiniaDevtools(app, pinia) {
           return;
         }
         if (inspectedStore) {
+          if (payload.nodeId !== PINIA_ROOT_ID)
+            globalThis.$store = toRaw(inspectedStore);
           payload.state = formatStoreForInspectorState(inspectedStore);
         }
       }
@@ -778,12 +780,14 @@ function devtoolsPlugin({ app, store, options }) {
     return;
   }
   store._isOptionsAPI = !!options.state;
-  patchActionForGrouping(store, Object.keys(options.actions), store._isOptionsAPI);
-  const originalHotUpdate = store._hotUpdate;
-  toRaw(store)._hotUpdate = function(newStore) {
-    originalHotUpdate.apply(this, arguments);
-    patchActionForGrouping(store, Object.keys(newStore._hmrPayload.actions), !!store._isOptionsAPI);
-  };
+  if (!store._p._testing) {
+    patchActionForGrouping(store, Object.keys(options.actions), store._isOptionsAPI);
+    const originalHotUpdate = store._hotUpdate;
+    toRaw(store)._hotUpdate = function(newStore) {
+      originalHotUpdate.apply(this, arguments);
+      patchActionForGrouping(store, Object.keys(newStore._hmrPayload.actions), !!store._isOptionsAPI);
+    };
+  }
   addStoreToDevtools(
     app,
     // FIXME: is there a way to allow the assignment from Store<Id, S, G, A> to StoreGeneric?
@@ -802,7 +806,7 @@ function createPinia() {
         pinia._a = app;
         app.provide(piniaSymbol, pinia);
         app.config.globalProperties.$pinia = pinia;
-        if (USE_DEVTOOLS) {
+        if (IS_CLIENT) {
           registerPiniaDevtools(app, pinia);
         }
         toBeInstalled.forEach((plugin) => _p.push(plugin));
@@ -825,10 +829,17 @@ function createPinia() {
     _s: /* @__PURE__ */ new Map(),
     state
   });
-  if (USE_DEVTOOLS && typeof Proxy !== "undefined") {
+  if (typeof Proxy !== "undefined") {
     pinia.use(devtoolsPlugin);
   }
   return pinia;
+}
+function disposePinia(pinia) {
+  pinia._e.stop();
+  pinia._s.clear();
+  pinia._p.splice(0);
+  pinia.state.value = {};
+  pinia._a = null;
 }
 var isUseStore = (fn) => {
   return typeof fn === "function" && typeof fn.$id === "string";
@@ -903,11 +914,12 @@ function triggerSubscriptions(subscriptions, ...args) {
   });
 }
 var fallbackRunWithContext = (fn) => fn();
+var ACTION_MARKER = Symbol();
+var ACTION_NAME = Symbol();
 function mergeReactiveObjects(target, patchToApply) {
   if (target instanceof Map && patchToApply instanceof Map) {
     patchToApply.forEach((value, key) => target.set(key, value));
-  }
-  if (target instanceof Set && patchToApply instanceof Set) {
+  } else if (target instanceof Set && patchToApply instanceof Set) {
     patchToApply.forEach(target.add, target);
   }
   for (const key in patchToApply) {
@@ -984,10 +996,7 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
   if (!pinia._e.active) {
     throw new Error("Pinia destroyed");
   }
-  const $subscribeOptions = {
-    deep: true
-    // flush: 'post',
-  };
+  const $subscribeOptions = { deep: true };
   if (!isVue2) {
     $subscribeOptions.onTrigger = (event) => {
       if (isListening) {
@@ -1065,8 +1074,12 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
     actionSubscriptions = [];
     pinia._s.delete($id);
   }
-  function wrapAction(name, action) {
-    return function() {
+  const action = (fn, name = "") => {
+    if (ACTION_MARKER in fn) {
+      fn[ACTION_NAME] = name;
+      return fn;
+    }
+    const wrappedAction = function() {
       setActivePinia(pinia);
       const args = Array.from(arguments);
       const afterCallbackList = [];
@@ -1079,14 +1092,14 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
       }
       triggerSubscriptions(actionSubscriptions, {
         args,
-        name,
+        name: wrappedAction[ACTION_NAME],
         store,
         after,
         onError
       });
       let ret;
       try {
-        ret = action.apply(this && this.$id === $id ? this : store, args);
+        ret = fn.apply(this && this.$id === $id ? this : store, args);
       } catch (error) {
         triggerSubscriptions(onErrorCallbackList, error);
         throw error;
@@ -1103,7 +1116,10 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
       triggerSubscriptions(afterCallbackList, ret);
       return ret;
     };
-  }
+    wrappedAction[ACTION_MARKER] = true;
+    wrappedAction[ACTION_NAME] = name;
+    return wrappedAction;
+  };
   const _hmrPayload = markRaw({
     actions: {},
     getters: {},
@@ -1147,7 +1163,7 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
   ) : partialStore);
   pinia._s.set($id, store);
   const runWithContext = pinia._a && pinia._a.runWithContext || fallbackRunWithContext;
-  const setupStore = runWithContext(() => pinia._e.run(() => (scope = effectScope()).run(setup)));
+  const setupStore = runWithContext(() => pinia._e.run(() => (scope = effectScope()).run(() => setup({ action }))));
   for (const key in setupStore) {
     const prop = setupStore[key];
     if (isRef(prop) && !isComputed(prop) || isReactive(prop)) {
@@ -1171,7 +1187,7 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
         _hmrPayload.state.push(key);
       }
     } else if (typeof prop === "function") {
-      const actionValue = hot ? prop : wrapAction(key, prop);
+      const actionValue = hot ? prop : action(prop, key);
       if (isVue2) {
         set(setupStore, key, actionValue);
       } else {
@@ -1242,8 +1258,8 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
         isListening = true;
       });
       for (const actionName in newStore._hmrPayload.actions) {
-        const action = newStore[actionName];
-        set(store, actionName, wrapAction(actionName, action));
+        const actionFn = newStore[actionName];
+        set(store, actionName, action(actionFn, actionName));
       }
       for (const getterName in newStore._hmrPayload.getters) {
         const getter = newStore._hmrPayload.getters[getterName];
@@ -1271,7 +1287,7 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
       store._hotUpdating = false;
     });
   }
-  if (USE_DEVTOOLS) {
+  if (IS_CLIENT) {
     const nonEnumerable = {
       writable: true,
       configurable: true,
@@ -1286,7 +1302,7 @@ function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) 
     store._r = true;
   }
   pinia._p.forEach((extender) => {
-    if (USE_DEVTOOLS) {
+    if (IS_CLIENT) {
       const extensions = scope.run(() => extender({
         store,
         app: pinia._a,
@@ -1485,7 +1501,7 @@ var PiniaVuePlugin = function(_Vue) {
         if (IS_CLIENT) {
           setActivePinia(pinia);
         }
-        if (USE_DEVTOOLS) {
+        if (IS_CLIENT) {
           registerPiniaDevtools(pinia._a, pinia);
         }
       } else if (!this.$pinia && options.parent && options.parent.$pinia) {
@@ -1503,6 +1519,7 @@ export {
   acceptHMRUpdate,
   createPinia,
   defineStore,
+  disposePinia,
   getActivePinia,
   mapActions,
   mapGetters,
@@ -1518,8 +1535,8 @@ export {
 
 pinia/dist/pinia.mjs:
   (*!
-   * pinia v2.1.7
-   * (c) 2023 Eduardo San Martin Morote
+   * pinia v2.2.2
+   * (c) 2024 Eduardo San Martin Morote
    * @license MIT
    *)
 */

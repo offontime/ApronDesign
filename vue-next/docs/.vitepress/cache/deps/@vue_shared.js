@@ -9,12 +9,14 @@ import {
   SlotFlags,
   camelize,
   capitalize,
+  cssVarNameEscapeSymbolsRE,
   def,
   escapeHtml,
   escapeHtmlComment,
   extend,
   genPropsAccessExp,
   generateCodeFrame,
+  getEscapedCssVarName,
   getGlobalThis,
   hasChanged,
   hasOwn,
@@ -67,7 +69,7 @@ import {
   toNumber,
   toRawType,
   toTypeString
-} from "./chunk-NCN73KX5.js";
+} from "./chunk-QZUEVCKS.js";
 import "./chunk-BUSYA2B4.js";
 export {
   EMPTY_ARR,
@@ -80,12 +82,14 @@ export {
   SlotFlags,
   camelize,
   capitalize,
+  cssVarNameEscapeSymbolsRE,
   def,
   escapeHtml,
   escapeHtmlComment,
   extend,
   genPropsAccessExp,
   generateCodeFrame,
+  getEscapedCssVarName,
   getGlobalThis,
   hasChanged,
   hasOwn,

@@ -54,9 +54,11 @@ var cacheStringFunction = (fn) => {
   };
 };
 var camelizeRE = /-(\w)/g;
-var camelize = cacheStringFunction((str) => {
-  return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
-});
+var camelize = cacheStringFunction(
+  (str) => {
+    return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
+  }
+);
 var hyphenateRE = /\B([A-Z])/g;
 var hyphenate = cacheStringFunction(
   (str) => str.replace(hyphenateRE, "-$1").toLowerCase()
@@ -64,20 +66,23 @@ var hyphenate = cacheStringFunction(
 var capitalize = cacheStringFunction((str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 });
-var toHandlerKey = cacheStringFunction((str) => {
-  const s = str ? `on${capitalize(str)}` : ``;
-  return s;
-});
+var toHandlerKey = cacheStringFunction(
+  (str) => {
+    const s = str ? `on${capitalize(str)}` : ``;
+    return s;
+  }
+);
 var hasChanged = (value, oldValue) => !Object.is(value, oldValue);
-var invokeArrayFns = (fns, arg) => {
+var invokeArrayFns = (fns, ...arg) => {
   for (let i = 0; i < fns.length; i++) {
-    fns[i](arg);
+    fns[i](...arg);
   }
 };
-var def = (obj, key, value) => {
+var def = (obj, key, value, writable = false) => {
   Object.defineProperty(obj, key, {
     configurable: true,
     enumerable: false,
+    writable,
     value
   });
 };
@@ -122,8 +127,8 @@ var PatchFlags = {
   "1024": "DYNAMIC_SLOTS",
   "DEV_ROOT_FRAGMENT": 2048,
   "2048": "DEV_ROOT_FRAGMENT",
-  "HOISTED": -1,
-  "-1": "HOISTED",
+  "CACHED": -1,
+  "-1": "CACHED",
   "BAIL": -2,
   "-2": "BAIL"
 };
@@ -180,11 +185,14 @@ var slotFlagsText = {
   [2]: "DYNAMIC",
   [3]: "FORWARDED"
 };
-var GLOBALS_ALLOWED = "Infinity,undefined,NaN,isFinite,isNaN,parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,BigInt,console,Error";
+var GLOBALS_ALLOWED = "Infinity,undefined,NaN,isFinite,isNaN,parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,BigInt,console,Error,Symbol";
 var isGloballyAllowed = makeMap(GLOBALS_ALLOWED);
 var isGloballyWhitelisted = isGloballyAllowed;
 var range = 2;
 function generateCodeFrame(source, start = 0, end = source.length) {
+  start = Math.max(0, Math.min(start, source.length));
+  end = Math.max(0, Math.min(end, source.length));
+  if (start > end) return "";
   let lines = source.split(/(\r?\n)/);
   const newlineSequences = lines.filter((_, idx) => idx % 2 === 1);
   lines = lines.filter((_, idx) => idx % 2 === 0);
@@ -194,8 +202,7 @@ function generateCodeFrame(source, start = 0, end = source.length) {
     count += lines[i].length + (newlineSequences[i] && newlineSequences[i].length || 0);
     if (count >= start) {
       for (let j = i - range; j <= i + range || end > count; j++) {
-        if (j < 0 || j >= lines.length)
-          continue;
+        if (j < 0 || j >= lines.length) continue;
         const line = j + 1;
         res.push(
           `${line}${" ".repeat(Math.max(3 - String(line).length, 0))}|  ${lines[j]}`
@@ -259,8 +266,8 @@ function stringifyStyle(styles) {
   }
   for (const key in styles) {
     const value = styles[key];
-    const normalizedKey = key.startsWith(`--`) ? key : hyphenate(key);
     if (isString(value) || typeof value === "number") {
+      const normalizedKey = key.startsWith(`--`) ? key : hyphenate(key);
       ret += `${normalizedKey}:${value};`;
     }
   }
@@ -287,8 +294,7 @@ function normalizeClass(value) {
   return res.trim();
 }
 function normalizeProps(props) {
-  if (!props)
-    return null;
+  if (!props) return null;
   let { class: klass, style } = props;
   if (klass && !isString(klass)) {
     props.class = normalizeClass(klass);
@@ -388,9 +394,15 @@ var commentStripRE = /^-?>|<!--|-->|--!>|<!-$/g;
 function escapeHtmlComment(src) {
   return src.replace(commentStripRE, "");
 }
+var cssVarNameEscapeSymbolsRE = /[ !"#$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g;
+function getEscapedCssVarName(key, doubleEscape) {
+  return key.replace(
+    cssVarNameEscapeSymbolsRE,
+    (s) => doubleEscape ? s === '"' ? '\\\\\\"' : `\\\\${s}` : `\\${s}`
+  );
+}
 function looseCompareArrays(a, b) {
-  if (a.length !== b.length)
-    return false;
+  if (a.length !== b.length) return false;
   let equal = true;
   for (let i = 0; equal && i < a.length; i++) {
     equal = looseEqual(a[i], b[i]);
@@ -398,8 +410,7 @@ function looseCompareArrays(a, b) {
   return equal;
 }
 function looseEqual(a, b) {
-  if (a === b)
-    return true;
+  if (a === b) return true;
   let aValidType = isDate(a);
   let bValidType = isDate(b);
   if (aValidType || bValidType) {
@@ -439,11 +450,14 @@ function looseEqual(a, b) {
 function looseIndexOf(arr, val) {
   return arr.findIndex((item) => looseEqual(item, val));
 }
+var isRef = (val) => {
+  return !!(val && val["__v_isRef"] === true);
+};
 var toDisplayString = (val) => {
-  return isString(val) ? val : val == null ? "" : isArray(val) || isObject(val) && (val.toString === objectToString || !isFunction(val.toString)) ? JSON.stringify(val, replacer, 2) : String(val);
+  return isString(val) ? val : val == null ? "" : isArray(val) || isObject(val) && (val.toString === objectToString || !isFunction(val.toString)) ? isRef(val) ? toDisplayString(val.value) : JSON.stringify(val, replacer, 2) : String(val);
 };
 var replacer = (_key, val) => {
-  if (val && val.__v_isRef) {
+  if (isRef(val)) {
     return replacer(_key, val.value);
   } else if (isMap(val)) {
     return {
@@ -468,7 +482,11 @@ var replacer = (_key, val) => {
 };
 var stringifySymbol = (v, i = "") => {
   var _a;
-  return isSymbol(v) ? `Symbol(${(_a = v.description) != null ? _a : i})` : v;
+  return (
+    // Symbol.description in es2019+ so we need to cast here to pass
+    // the lib: es2016 check
+    isSymbol(v) ? `Symbol(${(_a = v.description) != null ? _a : i})` : v
+  );
 };
 
 export {
@@ -537,6 +555,8 @@ export {
   isRenderableAttrValue,
   escapeHtml,
   escapeHtmlComment,
+  cssVarNameEscapeSymbolsRE,
+  getEscapedCssVarName,
   looseEqual,
   looseIndexOf,
   toDisplayString
@@ -545,9 +565,10 @@ export {
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.4.19
+  * @vue/shared v3.5.0
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
+  (*! #__NO_SIDE_EFFECTS__ *)
 */
-//# sourceMappingURL=chunk-2O72KIMW.js.map
+//# sourceMappingURL=chunk-QZUEVCKS.js.map

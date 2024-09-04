@@ -40,8 +40,8 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-VTKDOCVL.js";
-import "./chunk-NCN73KX5.js";
+} from "./chunk-GGDF7XMH.js";
+import "./chunk-QZUEVCKS.js";
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/vitepress/node_modules/@vueuse/shared/index.mjs

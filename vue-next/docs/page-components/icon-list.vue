@@ -199,7 +199,7 @@ export default {
             { name: '左对齐', key: 'text-align-left' },
             { name: '居中对齐', key: 'text-align-center' },
             { name: '右对齐', key: 'text-align-right' },
-            { name: '两端对齐', key: 'text-align-justifed' },
+            { name: '两端对齐', key: 'text-align-justified' },
             { name: '左对齐', key: 'align-horizontal-left' },
             { name: '居中对齐', key: 'align-horizontal-center' },
             { name: '右对齐', key: 'align-horizontal-right' },
@@ -207,7 +207,7 @@ export default {
             { name: '居中对齐', key: 'align-vertical-center' },
             { name: '底部对齐', key: 'align-vertical-bottom' },
             { name: '置于顶层', key: 'to-top-layer' },
-            { name: '上移一层', key: 'to-prev-ayer' },
+            { name: '上移一层', key: 'to-prev-layer' },
             { name: '置于底层', key: 'to-bottom-layer' },
             { name: '下移一层', key: 'to-next-layer' }
           ]
