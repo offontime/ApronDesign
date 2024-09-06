@@ -1,0 +1,24 @@
+import "./chunk-BUSYA2B4.js";
+
+// node_modules/@media-apron/vue-next/src/components/index.ts
+import Video from "/Users/mitkimi/Develop/opensource-dev/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/video.vue";
+var components = [
+  Video
+];
+var install = function(Vue) {
+  if (install.installed) {
+    return false;
+  }
+  components.map((component) => Vue.component(component.name, component));
+};
+if (typeof window !== "undefined" && window.Vue) {
+  install(window.Vue);
+}
+var components_default = {
+  install,
+  Video
+};
+export {
+  components_default as default
+};
+//# sourceMappingURL=@media-apron_vue-next_src_components_index.js.map

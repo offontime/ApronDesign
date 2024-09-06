@@ -54,11 +54,9 @@ var cacheStringFunction = (fn) => {
   };
 };
 var camelizeRE = /-(\w)/g;
-var camelize = cacheStringFunction(
-  (str) => {
-    return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
-  }
-);
+var camelize = cacheStringFunction((str) => {
+  return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
+});
 var hyphenateRE = /\B([A-Z])/g;
 var hyphenate = cacheStringFunction(
   (str) => str.replace(hyphenateRE, "-$1").toLowerCase()
@@ -66,12 +64,10 @@ var hyphenate = cacheStringFunction(
 var capitalize = cacheStringFunction((str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 });
-var toHandlerKey = cacheStringFunction(
-  (str) => {
-    const s = str ? `on${capitalize(str)}` : ``;
-    return s;
-  }
-);
+var toHandlerKey = cacheStringFunction((str) => {
+  const s = str ? `on${capitalize(str)}` : ``;
+  return s;
+});
 var hasChanged = (value, oldValue) => !Object.is(value, oldValue);
 var invokeArrayFns = (fns, ...arg) => {
   for (let i = 0; i < fns.length; i++) {
@@ -127,8 +123,8 @@ var PatchFlags = {
   "1024": "DYNAMIC_SLOTS",
   "DEV_ROOT_FRAGMENT": 2048,
   "2048": "DEV_ROOT_FRAGMENT",
-  "CACHED": -1,
-  "-1": "CACHED",
+  "HOISTED": -1,
+  "-1": "HOISTED",
   "BAIL": -2,
   "-2": "BAIL"
 };
@@ -185,7 +181,7 @@ var slotFlagsText = {
   [2]: "DYNAMIC",
   [3]: "FORWARDED"
 };
-var GLOBALS_ALLOWED = "Infinity,undefined,NaN,isFinite,isNaN,parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,BigInt,console,Error,Symbol";
+var GLOBALS_ALLOWED = "Infinity,undefined,NaN,isFinite,isNaN,parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,BigInt,console,Error";
 var isGloballyAllowed = makeMap(GLOBALS_ALLOWED);
 var isGloballyWhitelisted = isGloballyAllowed;
 var range = 2;
@@ -394,13 +390,6 @@ var commentStripRE = /^-?>|<!--|-->|--!>|<!-$/g;
 function escapeHtmlComment(src) {
   return src.replace(commentStripRE, "");
 }
-var cssVarNameEscapeSymbolsRE = /[ !"#$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g;
-function getEscapedCssVarName(key, doubleEscape) {
-  return key.replace(
-    cssVarNameEscapeSymbolsRE,
-    (s) => doubleEscape ? s === '"' ? '\\\\\\"' : `\\\\${s}` : `\\${s}`
-  );
-}
 function looseCompareArrays(a, b) {
   if (a.length !== b.length) return false;
   let equal = true;
@@ -451,7 +440,7 @@ function looseIndexOf(arr, val) {
   return arr.findIndex((item) => looseEqual(item, val));
 }
 var isRef = (val) => {
-  return !!(val && val["__v_isRef"] === true);
+  return !!(val && val.__v_isRef === true);
 };
 var toDisplayString = (val) => {
   return isString(val) ? val : val == null ? "" : isArray(val) || isObject(val) && (val.toString === objectToString || !isFunction(val.toString)) ? isRef(val) ? toDisplayString(val.value) : JSON.stringify(val, replacer, 2) : String(val);
@@ -555,8 +544,6 @@ export {
   isRenderableAttrValue,
   escapeHtml,
   escapeHtmlComment,
-  cssVarNameEscapeSymbolsRE,
-  getEscapedCssVarName,
   looseEqual,
   looseIndexOf,
   toDisplayString
@@ -565,10 +552,10 @@ export {
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.5.0
+  * @vue/shared v3.4.38
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
   (*! #__NO_SIDE_EFFECTS__ *)
 */
-//# sourceMappingURL=chunk-QCPABISY.js.map
+//# sourceMappingURL=chunk-FVWBA4CL.js.map

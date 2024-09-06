@@ -1,0 +1,88 @@
+{
+  "hash": "df891e4e",
+  "configHash": "4fa67ecc",
+  "lockfileHash": "642921d3",
+  "browserHash": "01165f84",
+  "optimized": {
+    "vue": {
+      "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "2d3b977a",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "f97009b7",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../node_modules/vitepress/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "db3d8bda",
+      "needsInterop": false
+    },
+    "@icon-apron/vue-next": {
+      "src": "../../../node_modules/@icon-apron/vue-next/lib/@icon-apron/vue-next.js",
+      "file": "@icon-apron_vue-next.js",
+      "fileHash": "e2a851ca",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "83ba83ca",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "2eab6aec",
+      "needsInterop": false
+    },
+    "dayjs": {
+      "src": "../../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "c5f33a29",
+      "needsInterop": true
+    },
+    "pinia": {
+      "src": "../../../node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "5894beb8",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "dc943128",
+      "needsInterop": false
+    },
+    "@theme/index": {
+      "src": "../../../node_modules/vitepress/dist/client/theme-default/index.js",
+      "file": "@theme_index.js",
+      "fileHash": "04ae0c6d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HYHGWAVM": {
+      "file": "chunk-HYHGWAVM.js"
+    },
+    "chunk-GZOPNIPP": {
+      "file": "chunk-GZOPNIPP.js"
+    },
+    "chunk-Z5MM7V3J": {
+      "file": "chunk-Z5MM7V3J.js"
+    },
+    "chunk-YL55EMNB": {
+      "file": "chunk-YL55EMNB.js"
+    },
+    "chunk-FVWBA4CL": {
+      "file": "chunk-FVWBA4CL.js"
+    },
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
+    }
+  }
+}
