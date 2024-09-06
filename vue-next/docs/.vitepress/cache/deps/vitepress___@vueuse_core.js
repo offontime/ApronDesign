@@ -40,11 +40,11 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-VTKDOCVL.js";
-import "./chunk-NCN73KX5.js";
+} from "./chunk-5UUHFGVO.js";
+import "./chunk-MDBYYE6L.js";
 import "./chunk-BUSYA2B4.js";
 
-// node_modules/vitepress/node_modules/@vueuse/shared/index.mjs
+// node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {
   var _a;
   const result = shallowRef();

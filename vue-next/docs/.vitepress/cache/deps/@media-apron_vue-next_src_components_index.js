@@ -1,7 +1,7 @@
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/@media-apron/vue-next/src/components/index.ts
-import Video from "/Users/mitkimi/Develop/opensource-dev/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/video.vue";
+import Video from "/Users/mitkimi/Documents/Develop/opensource/apron.design/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/video.vue";
 var components = [
   Video
 ];
