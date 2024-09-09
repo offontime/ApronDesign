@@ -57,6 +57,21 @@ editLink: true
     <div class="flex-container">
       <div class="timeline-dist">
         <div class="version">0.1.7-develop</div>
+        <div class="update-date">2024-09-09</div>
+      </div>
+      <div class="change-log">
+        <h3>🙋‍♂️ 更新</h3>
+        <ul>
+          <li>媒体组件：更新扩展包 @media-apron/vue-next version 1.3.0</li>
+          <li>媒体组件：视频播放器、音频播放器</li>
+        </ul>
+      </div>
+    </div>
+  </ap-timeline-item>
+  <ap-timeline-item>
+    <div class="flex-container">
+      <div class="timeline-dist">
+        <div class="version">0.1.7-develop</div>
         <div class="update-date">2024-09-03</div>
       </div>
       <div class="change-log">
