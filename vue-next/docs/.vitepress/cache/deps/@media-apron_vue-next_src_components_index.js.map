@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../../node_modules/@media-apron/vue-next/src/components/index.ts"],
-  "sourcesContent": ["import Video from './video.vue'\n\nconst components = [\n  Video\n]\n\nconst install = function (Vue) {\n  if (install.installed) {\n    return false\n  }\n  components.map(component => Vue.component(component.name, component))\n}\n\nif (typeof window !== 'undefined' && window.Vue) {\n  install(window.Vue)\n}\n\nexport default {\n  install,\n  Video\n}"],
-  "mappings": ";;;AAAA,OAAO,WAAW;AAElB,IAAM,aAAa;AAAA,EACjB;AACF;AAEA,IAAM,UAAU,SAAU,KAAK;AAC7B,MAAI,QAAQ,WAAW;AACrB,WAAO;AAAA,EACT;AACA,aAAW,IAAI,eAAa,IAAI,UAAU,UAAU,MAAM,SAAS,CAAC;AACtE;AAEA,IAAI,OAAO,WAAW,eAAe,OAAO,KAAK;AAC/C,UAAQ,OAAO,GAAG;AACpB;AAEA,IAAO,qBAAQ;AAAA,EACb;AAAA,EACA;AACF;",
+  "sourcesContent": ["import Video from './video.vue'\nimport Audio from './audio.vue'\n\nconst components = [\n  Audio,\n  Video\n]\n\nconst install = function (Vue) {\n  if (install.installed) {\n    return false\n  }\n  components.map(component => Vue.component(component.name, component))\n}\n\nif (typeof window !== 'undefined' && window.Vue) {\n  install(window.Vue)\n}\n\nexport default {\n  install,\n  Audio,\n  Video\n}"],
+  "mappings": ";;;AAAA,OAAO,WAAW;AAClB,OAAO,WAAW;AAElB,IAAM,aAAa;AAAA,EACjB;AAAA,EACA;AACF;AAEA,IAAM,UAAU,SAAU,KAAK;AAC7B,MAAI,QAAQ,WAAW;AACrB,WAAO;AAAA,EACT;AACA,aAAW,IAAI,eAAa,IAAI,UAAU,UAAU,MAAM,SAAS,CAAC;AACtE;AAEA,IAAI,OAAO,WAAW,eAAe,OAAO,KAAK;AAC/C,UAAQ,OAAO,GAAG;AACpB;AAEA,IAAO,qBAAQ;AAAA,EACb;AAAA,EACA;AAAA,EACA;AACF;",
   "names": []
 }

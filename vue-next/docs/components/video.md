@@ -11,7 +11,7 @@ editLink: true
 # 视频播放器 Video
 > Apron Design 拥有独立的媒体播放器项目，以保证组件库项目本身不会过于臃肿。
 
-`Media Apron` 是 Apron Design 的分支组件包（当前版本为：1.1.0），需要依赖 `@icon-apron/vue-next` 使用，请确保使用前先安装了 Icon Apron。
+`Media Apron` 是 Apron Design 的分支组件包（当前版本为：1.2.0），需要依赖 `@icon-apron/vue-next` 使用，请确保使用前先安装了 Icon Apron。
 
 使用视频播放器组件，你需要额外安装 `@media-apron/vue-next` 组件包。
 
