@@ -1,9 +1,36 @@
 .apron-carousel {
   width: 100%;
   height: 100%;
+  .full-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .swiper {
   height: 100%;
   position: relative;
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    transition: all, 300ms;
+    border-radius: 5px;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--color-main-active);
+  }
+}
+
+.apron-carousel-dash {
+  .swiper-pagination-horizontal {
+    .swiper-pagination-bullet-active {
+      width: 20px;
+    }
+  }
+  .swiper-vertical {
+    .swiper-pagination-bullet-active {
+      height: 20px;
+    }
+  }
 }

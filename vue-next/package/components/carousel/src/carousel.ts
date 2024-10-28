@@ -10,14 +10,13 @@ export const carouselProps = {
    * @description indicator
    */
   indicator: { type: String || Boolean, default: false },
+  direction: { type: String, default: 'horizontal' },
+  speed: { type: Number, default: 500 },
   autoplay: { type: Boolean, default: false },
-  /**
-   * @description same as native hyperlink's `target`
-   */
-  target: {
-    type: String as PropType<'_blank' | '_parent' | '_self' | '_top' | string>,
-    default: '_self',
-  },
+  delay: { type: Number, default: 3000 },
+  loop: { type: Boolean, default: false },
+  navigator: { type: Boolean, default: false },
+  effect: { type: String || Boolean, default: false }
 } 
 export type CarouselProps = ExtractPropTypes<typeof carouselProps>
 

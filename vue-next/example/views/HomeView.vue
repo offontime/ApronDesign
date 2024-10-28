@@ -10,8 +10,14 @@ const inputValue = ref('1234')
     <div class="section">
       <h1>Carousel</h1>
       <div style="height: 500px">
-        <ap-carousel indicator="dot"></ap-carousel>
+        <ap-carousel :data="[
+          { name: 'Wisper Classic', backImgUrl: 'https://cdn.offontime.com/images/p01.jpg' },
+          { name: 'Wipser milk', backImgUrl: 'https://cdn.offontime.com/images/p03.jpg' },
+          { name: 'Rider', backImgUrl: 'https://cdn.offontime.com/images/840882c28dc383c4ceb9d90ed3b47aed.JPG' }
+        ]" indicator="dot" loop></ap-carousel>
       </div>
+    </div>
+    <div class="section">
       <h1>Input {{ inputValue }}</h1>
       <div>
         <ap-input v-model="inputValue" placeholder="输入点什么放在这里？" />
