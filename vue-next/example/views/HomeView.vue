@@ -8,6 +8,10 @@ const inputValue = ref('1234')
 <template>
   <div class="main-container">
     <div class="section">
+      <h1>Carousel</h1>
+      <div style="height: 500px">
+        <ap-carousel indicator="dot"></ap-carousel>
+      </div>
       <h1>Input {{ inputValue }}</h1>
       <div>
         <ap-input v-model="inputValue" placeholder="输入点什么放在这里？" />

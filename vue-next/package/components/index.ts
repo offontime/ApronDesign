@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
 } from './breadcrumb'
 import { Button } from './button'
+import { Carousel } from './carousel'
 import { Checkbox } from './checkbox'
 import { Divider } from './divider'
 import { Input } from './input'
@@ -23,6 +24,7 @@ export default [
   Breadcrumb,
   BreadcrumbItem,
   Button,
+  Carousel,
   Checkbox,
   CircleButton,
   Divider,
