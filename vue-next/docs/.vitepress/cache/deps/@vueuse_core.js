@@ -39,8 +39,8 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-VTKDOCVL.js";
-import "./chunk-NCN73KX5.js";
+} from "./chunk-HTCWHMP6.js";
+import "./chunk-DP4PHTIW.js";
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/@vueuse/core/node_modules/@vueuse/shared/index.mjs
