@@ -19,10 +19,6 @@
         <swiper-slide v-for="item, index in data" :key="`swiper-${index}`">
           <img class="full-cover-img" :src="item.backImgUrl" />
         </swiper-slide>
-        <swiper-slide>1</swiper-slide>
-        <swiper-slide>1</swiper-slide>
-        <swiper-slide>1</swiper-slide>
-        <swiper-slide>1</swiper-slide>
     </swiper>
   </div>
 </template>

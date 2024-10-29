@@ -1,8 +1,8 @@
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/@media-apron/vue-next/src/components/index.ts
-import Video from "/Users/mitkimicn/Documents/develop/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/video.vue";
-import Audio from "/Users/mitkimicn/Documents/develop/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/audio.vue";
+import Video from "/Users/mitkimi/Documents/develop/opensource/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/video.vue";
+import Audio from "/Users/mitkimi/Documents/develop/opensource/ApronDesign/vue-next/node_modules/@media-apron/vue-next/src/components/audio.vue";
 var components = [
   Audio,
   Video

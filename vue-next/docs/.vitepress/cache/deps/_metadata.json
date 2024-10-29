@@ -1,79 +1,79 @@
 {
-  "hash": "d9b03332",
-  "configHash": "b1b41a0e",
-  "lockfileHash": "56ad681f",
-  "browserHash": "5d422d2d",
+  "hash": "36766452",
+  "configHash": "15c4b8a9",
+  "lockfileHash": "938c710f",
+  "browserHash": "45f362a9",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "1df186ef",
+      "fileHash": "48afe828",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "e1bfad2d",
+      "fileHash": "d562e87b",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/vitepress/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "d2fc19fc",
+      "fileHash": "24949b7e",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
       "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "62255b43",
+      "fileHash": "34243f2a",
       "needsInterop": false
     },
     "@icon-apron/vue-next": {
       "src": "../../../../node_modules/@icon-apron/vue-next/lib/@icon-apron/vue-next.js",
       "file": "@icon-apron_vue-next.js",
-      "fileHash": "386d6b07",
+      "fileHash": "070eba93",
       "needsInterop": false
     },
     "@code-apron/vue-next": {
       "src": "../../../../node_modules/@code-apron/vue-next/lib/@code-apron/vue-next.mjs",
       "file": "@code-apron_vue-next.js",
-      "fileHash": "2fe378db",
+      "fileHash": "344cc931",
       "needsInterop": false
     },
     "@media-apron/vue-next/src/components/index": {
       "src": "../../../../node_modules/@media-apron/vue-next/src/components/index.ts",
       "file": "@media-apron_vue-next_src_components_index.js",
-      "fileHash": "b3710ed7",
+      "fileHash": "ac5a25b3",
       "needsInterop": false
     },
     "dayjs": {
       "src": "../../../../node_modules/dayjs/dayjs.min.js",
       "file": "dayjs.js",
-      "fileHash": "f4941bc1",
+      "fileHash": "975a8d80",
       "needsInterop": true
     },
     "swiper/modules": {
       "src": "../../../../node_modules/swiper/modules/index.mjs",
       "file": "swiper_modules.js",
-      "fileHash": "31300fab",
+      "fileHash": "aa0026d1",
       "needsInterop": false
     },
     "swiper/vue": {
       "src": "../../../../node_modules/swiper/swiper-vue.mjs",
       "file": "swiper_vue.js",
-      "fileHash": "fd70cb4e",
+      "fileHash": "57d72640",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "7955b416",
+      "fileHash": "57ce3d91",
       "needsInterop": false
     },
     "@vue/shared": {
       "src": "../../../../node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "e9c4da01",
+      "fileHash": "50c18c0e",
       "needsInterop": false
     }
   },

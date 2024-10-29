@@ -11,34 +11,59 @@ editLink: true
 # 轮播 Carousel
 > 展示多张图片、视频，用户可以手动播放或自动切换。
 
-<!-- ## 基本用法
-适用于组件，也适用于任何 HTML 标签。
+此组件集成的是 Swiper11，并只暴露了一部份功能使用。
+
+## 基本用法
+Carousel 默认沾满整个父容器大小。
 
 :::preview
-demo-preview=../demos/divider/basic-usage.vue
+demo-preview=../demos/carousel/basic-usage.vue
 :::
 
-### 线型
-给组件添加 `line-style` 属性改变分割线的线型，值为 css 的 `border-style` 属性所支持的值：`solid`、`dashed`、`dotted`、`double`，默认为 `solid`。
+### 设置指示器
+给组件添加 `indicator` 属性改变指示器显示，可选的值有：`dot`（点）、`dash`（短线），默认为不显示指示器。
 :::preview
-demo-preview=../demos/divider/line-style.vue
+demo-preview=../demos/carousel/indicator.vue
 :::
 
-### 带有文字的分割线
-给组件添加插槽，会自动为分割线添加文字。通过 `orientation` 属性为文字配置显示位置，默认为 center。
+### 滚动方向
+通过 `direction` 属性为组件配置滚动方向，可选的值有：`horizontal`（水平滚动）、`horizontal`（垂直滚动），默认为 `horizontal`。
 :::preview
-demo-preview=../demos/divider/orientation.vue
+demo-preview=../demos/carousel/direction.vue
+:::
+
+### 自动播放
+通过 `autoplay` 属性为组件配置自动滚动。同时可以配置 `delay` 时间设置停留时间。默认是 3 秒。
+:::preview
+demo-preview=../demos/carousel/autoplay.vue
+:::
+
+### 循环
+通过 `loop` 属性为组件配置为循环。
+:::preview
+demo-preview=../demos/carousel/loop.vue
+:::
+
+### 动效
+通过配置 `effect` 属性为组件配置切换动效，可选的值有：`fade`、 `cube`，默认不设置时即表示滑动。
+:::preview
+demo-preview=../demos/carousel/effect.vue
 :::
 
 ## Api
-### `<divider>` Props
+### `<Carousel>` Props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 | 备注 |
 | :----- | :----- | :----- | :----- | :----- | :----- |
-| line-style | 线型 | String | solid/dashed/dotted/double | solid | 使用 css 的 `border-style` 属性支持的值 |
-| orientation | 分割线文字显示位置 | String | left/center/right | center | 仅在有插槽的时候有效 |
+| data | 渲染数据 | Array[Object] | - | [] |  |
+| indicator | 指示器 | String/Boolean | `dot`, `dash` | false | |
+| direction | 滚动方向 | String | `horizontal` / `vertical` | `horizontal` |  |
+| speed | 切换时的滚动速度 | Number | - | 500 | 单位：ms |
+| autoplay | 自动切换 | Boolean | `true` / `false` | false | |
+| delay | 自动切换时的停留时间 | Number | - | 3000 | 单位：ms，与 autoplay 一起使用时生效 |
+| loop | 循环 | Boolean | - | false | 播放到结尾时，下一张是第一张 |
+| effect | 动效 | String/Boolean | `fade` / `cube` | false | 不添加动效时，默认为滑动效果 |
 
-### `<divider>` Slots
-
-| 插槽名 | 说明 | 参数 |
-| :----- | :----- | :----- |
-| default | 默认插槽 | 分割线上的文字提示 | -->
+### `data` Props
+| 参数 | 说明 | 类型 | 可选值 | 默认值 | 备注 |
+| :----- | :----- | :----- | :----- | :----- | :----- |
+| backImgUrl | 默认占满整个容器的图片 | String | - | - | 填入 URL |
