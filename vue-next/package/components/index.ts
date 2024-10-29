@@ -6,6 +6,7 @@ import {
 import { Button } from './button'
 import { Carousel } from './carousel'
 import { Checkbox } from './checkbox'
+import { Collapse } from './collapse'
 import { Divider } from './divider'
 import { Input } from './input'
 import { Link } from './link'
@@ -27,6 +28,7 @@ export default [
   Carousel,
   Checkbox,
   CircleButton,
+  Collapse,
   Divider,
   Empty,
   Input,
