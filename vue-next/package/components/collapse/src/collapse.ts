@@ -5,6 +5,14 @@ export const collapseProps = {
   data: {
     type: Array,
     default: [],
+  },
+  accordion: {
+    type: Boolean,
+    default: false
+  },
+  expand: {
+    type: Array,
+    default: []
   }
 } 
 export type CollapseProps = ExtractPropTypes<typeof collapseProps>

@@ -39,7 +39,7 @@ As we travel through life, let us not forget to take the time to explore the dep
     <div class="section">
       <h1>Collapse</h1>
       <div>
-        <ap-collapse :data="collapseData"></ap-collapse>
+        <ap-collapse :data="collapseData" accordion></ap-collapse>
       </div>
     </div>
     <div class="section">

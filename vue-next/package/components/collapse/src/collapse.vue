@@ -4,17 +4,16 @@
       'apron-collapse-item',
       isActiveArray.indexOf(index) >= 0 ? 'apron-collapse-item-active' : ''
     ]" v-for="item,index in data" :key="`apron-item-${index}`">
-      <div class="apron-collapse-item-title">
-        <div
-          class="apron-collapse-indicator"
-          @click="handleCollapseClick(index)"
-          >
+      <div class="apron-collapse-item-title" @click="handleCollapseClick(index)">
+        <div class="apron-collapse-indicator">
           <ap-icon name="right" :size="12" />
         </div>
         <div class="apron-collapse-title">{{ item.name }}</div>
       </div>
       <div class="apron-collapse-item-content">
-        <div class="content" v-html="item.content"></div>
+        <div class="content-container">
+          <div class="content" v-html="item.content"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +29,7 @@ defineOptions({
 const props = defineProps(collapseProps)
 const emit = defineEmits(collapseEmits)
 
-const isActiveArray = ref([0])
+const isActiveArray = ref(props.expand || [])
 
 function handleCollapseClick(index: Number) {
   const indexExists = isActiveArray.value.includes(index);
@@ -39,7 +38,11 @@ function handleCollapseClick(index: Number) {
     isActiveArray.value = isActiveArray.value.filter((element) => element!== index);
   } else {
     // 如果不包含，就添加这个index
-    isActiveArray.value = [...isActiveArray.value, index];
+    if (props.accordion) {
+      isActiveArray.value = [index]
+    } else {
+      isActiveArray.value = [...isActiveArray.value, index]
+    }
   }
 }
 </script>
