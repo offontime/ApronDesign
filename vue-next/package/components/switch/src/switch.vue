@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineModel } from 'vue'
 import { switchEmits, switchProps } from './switch'
 const isChecked = defineModel({
   default: false

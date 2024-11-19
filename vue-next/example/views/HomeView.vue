@@ -37,6 +37,11 @@ As we travel through life, let us not forget to take the time to explore the dep
 <template>
   <div class="main-container">
     <div class="section">
+      <h1>Select</h1>
+      <div>
+      </div>
+    </div>
+    <div class="section">
       <h1>Collapse</h1>
       <div>
         <ap-collapse :data="collapseData" accordion></ap-collapse>
