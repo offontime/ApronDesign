@@ -3,6 +3,7 @@ import { ref } from 'vue'
 const switchValue = ref(false)
 const checkboxValue = ref(false)
 const inputValue = ref('1234')
+const ischecked = ref(false)
 const collapseData = [
   {
     name: 'The Beauty of a Tranquil Morning',
@@ -37,8 +38,22 @@ As we travel through life, let us not forget to take the time to explore the dep
 <template>
   <div class="main-container">
     <div class="section">
-      <h1>Select</h1>
+      <h1>Form</h1>
       <div>
+        <ap-form>
+          <ap-form-item label="Phone Number">
+            <ap-input v-model="inputValue" prepend="+86" allow-clear placeholder="输入您的手机号" />
+          </ap-form-item>
+          <ap-form-item label="Password">
+            <ap-input v-model="inputValue" type="password" allow-clear placeholder="输入密码" />
+          </ap-form-item>
+          <ap-form-item>
+            <ap-checkbox v-model="ischecked">这里是一个复选框</ap-checkbox>
+          </ap-form-item>
+          <ap-form-item>
+            <ap-button type="primary">primary button</ap-button>
+          </ap-form-item>
+        </ap-form>
       </div>
     </div>
     <div class="section">

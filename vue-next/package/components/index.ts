@@ -8,6 +8,8 @@ import { Carousel } from './carousel'
 import { Checkbox } from './checkbox'
 import { Collapse } from './collapse'
 import { Divider } from './divider'
+import { Form } from './form'
+import { FormItem } from './form-item'
 import { Input } from './input'
 import { Link } from './link'
 import { Space } from './space'
@@ -30,6 +32,8 @@ export default [
   CircleButton,
   Collapse,
   Divider,
+  Form,
+  FormItem,
   Empty,
   Input,
   Link,
