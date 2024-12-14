@@ -24,6 +24,9 @@ export default defineConfig({
     },
     outDir: 'lib', // 输出目录
   },
+  server: {
+    host: '0.0.0.0'
+  },
   plugins: [
     vue(),
     vueJsx()

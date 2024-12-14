@@ -12,6 +12,7 @@ import { Form } from './form'
 import { FormItem } from './form-item'
 import { Input } from './input'
 import { Link } from './link'
+import { Select } from './select'
 import { Space } from './space'
 import { Switch } from './switch'
 import {
@@ -37,6 +38,7 @@ export default [
   Empty,
   Input,
   Link,
+  Select,
   Space,
   Spin,
   Switch,

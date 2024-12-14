@@ -33,10 +33,26 @@ The journey within is a journey of self-discovery and self-love. It is about lea
 As we travel through life, let us not forget to take the time to explore the depths of our being. Let us cherish the moments of joy and find strength in the face of adversity. For in the end, the journey within is what truly shapes us and makes our lives meaningful. It is a journey that leads us to a place of self-awareness, peace, and fulfillment, and it is a journey that is worth taking with an open heart and a brave spirit.`
   }
 ]
+
+const selectValue = ref(1)
+const selectOptions = [
+  { label: '中国', value: 1 },
+  { label: '日本', value: 2 },
+  { label: '韩国', value: 3 },
+  { label: '台湾', value: 4 },
+  { label: '香港', value: 5 },
+  { label: '澳门', value: 6 },
+]
 </script>
 
 <template>
   <div class="main-container">
+    <div class="section">
+      <h1>Select</h1>
+      <div>
+        <ap-select v-model="selectValue" :options="selectOptions" allowBlock></ap-select>
+      </div>
+    </div>
     <div class="section">
       <h1>Form</h1>
       <div>
